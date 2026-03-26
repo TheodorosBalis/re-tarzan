@@ -1,20 +1,21 @@
-/* Address: 0x004A9140 */
+// Address: 0x004A9140
 
 void InitAudioLine(void)
 
 {
-  if (AudioLinesPTR != (int *)0x0) {
-    (**(code **)(*AudioLinesPTR + 0x3c))(AudioLinesPTR,(int)DAT_009cf150);
-    if (AudioLinesPTR != (int *)0x0) {
-      (**(code **)(*AudioLinesPTR + 0x48))(AudioLinesPTR);
-      if (AudioLinesPTR != (int *)0x0) {
-        (**(code **)(*AudioLinesPTR + 8))(AudioLinesPTR);
+  if (g_AudioLineSoundBuffer != (int *)0x0) {
+    (**(code **)(*g_AudioLineSoundBuffer + 0x3c))(g_AudioLineSoundBuffer,(int)g_DSoundVolumeCurve);
+    if (g_AudioLineSoundBuffer != (int *)0x0) {
+      (**(code **)(*g_AudioLineSoundBuffer + 0x48))(g_AudioLineSoundBuffer);
+      if (g_AudioLineSoundBuffer != (int *)0x0) {
+        (**(code **)(*g_AudioLineSoundBuffer + 8))(g_AudioLineSoundBuffer);
       }
     }
   }
-  AudioLinesPTR = (int *)0x0;
-  FUN_00498c10();
-  DAT_009e4a7c = 0;
+  g_AudioLineSoundBuffer = (int *)0x0;
+  CloseAudioEsfStream();
+  g_AudioLinePauseStartTick = 0;
   return;
 }
+
 

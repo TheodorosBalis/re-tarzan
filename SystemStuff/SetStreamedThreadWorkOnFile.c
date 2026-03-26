@@ -1,4 +1,4 @@
-/* Address: 0x004A1990 */
+// Address: 0x004A1990
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -43,4 +43,5 @@ void SetStreamedThreadWorkOnFile
   DAT_00724ed0 = DAT_00724edc;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004980E0 */
+// Address: 0x004980E0
 
 void SynchronizeWithStreamedThread(char param_1)
 
@@ -37,4 +37,5 @@ void SynchronizeWithStreamedThread(char param_1)
   }
   return;
 }
+
 

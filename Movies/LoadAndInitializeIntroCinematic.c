@@ -1,4 +1,4 @@
-/* Address: 0x00494230 */
+// Address: 0x00494230
 
 void LoadAndInitializeIntroCinematic(void)
 
@@ -18,4 +18,5 @@ void LoadAndInitializeIntroCinematic(void)
   DAT_0053a314 = 0;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004B672F */
+// Address: 0x004B672F
 
 int AllocateObjectSlot(void)
 
@@ -61,4 +61,5 @@ LAB_004b6841:
   LeaveCSforObjectInTable(0x12);
   return iVar4;
 }
+
 

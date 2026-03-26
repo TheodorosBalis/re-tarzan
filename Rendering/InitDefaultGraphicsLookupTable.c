@@ -1,4 +1,4 @@
-/* Address: 0x0049AB00 */
+// Address: 0x0049AB00
 
 void InitDefaultGraphicsLookupTable(void)
 
@@ -89,4 +89,5 @@ void InitDefaultGraphicsLookupTable(void)
   DAT_007223f4._0_1_ = 0;
   return;
 }
+
 

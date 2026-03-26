@@ -1,4 +1,4 @@
-/* Address: 0x00429370 */
+// Address: 0x00429370
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -21,4 +21,5 @@ void InitiateFade(ushort param_1,undefined2 param_2)
   _DAT_0051c4a8 = (int)FadeBrightness;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004B0028 */
+// Address: 0x004B0028
 
 undefined4 GetFileAttributes(LPCSTR param_1,byte param_2)
 
@@ -22,4 +22,5 @@ undefined4 GetFileAttributes(LPCSTR param_1,byte param_2)
   }
   return 0xffffffff;
 }
+
 

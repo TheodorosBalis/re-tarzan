@@ -1,4 +1,4 @@
-/* Address: 0x004B36F1 */
+// Address: 0x004B36F1
 
 void SetValueInHeap(int param_1)
 
@@ -7,4 +7,5 @@ void SetValueInHeap(int param_1)
   *(undefined4 *)(param_1 + 0x14) = 1;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004A1A30 */
+// Address: 0x004A1A30
 
 void HandleTheStreamedThread(void)
 
@@ -11,4 +11,5 @@ void HandleTheStreamedThread(void)
   FUN_00498520(&DAT_00724ee4,&DAT_00724ee8);
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x0049F260 */
+// Address: 0x0049F260
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -22,16 +22,16 @@ undefined4 DrawOptionsMenu(undefined4 *param_1,int param_2)
   int local_c;
   int local_8;
   
-  if (DAT_007241ec != param_1) {
-    if (DAT_007241e8 == (undefined4 *)0x0) {
-      DAT_007241e8 = DAT_007241ec;
+  if (g_CurrentOptionsMenuTextList != param_1) {
+    if (g_PreviousOptionsMenuTextList == (undefined4 *)0x0) {
+      g_PreviousOptionsMenuTextList = g_CurrentOptionsMenuTextList;
     }
-    DAT_007241ec = param_1;
-    if (DAT_007241e8 == (undefined4 *)0x0) goto LAB_0049f2a0;
-    DAT_007241f0 = 100;
+    g_CurrentOptionsMenuTextList = param_1;
+    if (g_PreviousOptionsMenuTextList == (undefined4 *)0x0) goto LAB_0049f2a0;
+    g_OptionsMenuTransitionPercent = 100;
   }
-  if (DAT_007241e8 != (undefined4 *)0x0) {
-    param_1 = DAT_007241e8;
+  if (g_PreviousOptionsMenuTextList != (undefined4 *)0x0) {
+    param_1 = g_PreviousOptionsMenuTextList;
   }
 LAB_0049f2a0:
   if (param_1 == (undefined4 *)0x0) {
@@ -65,21 +65,21 @@ LAB_0049f2a0:
   iVar11 = (iVar3 - iVar2) / 2;
   iVar4 = GetWindowHeight();
   iVar4 = (iVar4 - iVar10) / 2;
-  if (DAT_007241e8 == (undefined4 *)0x0) {
-    DAT_007241f0 = DAT_007241f0 + 0x1c;
-    if (99 < DAT_007241f0) {
-      DAT_007241f0 = 100;
+  if (g_PreviousOptionsMenuTextList == (undefined4 *)0x0) {
+    g_OptionsMenuTransitionPercent = g_OptionsMenuTransitionPercent + 0x1c;
+    if (99 < g_OptionsMenuTransitionPercent) {
+      g_OptionsMenuTransitionPercent = 100;
     }
   }
   else {
-    DAT_007241f0 = DAT_007241f0 + -0x1c;
-    if (DAT_007241f0 < 1) {
-      DAT_007241e8 = (undefined4 *)0x0;
-      DAT_007241f0 = 0;
+    g_OptionsMenuTransitionPercent = g_OptionsMenuTransitionPercent + -0x1c;
+    if (g_OptionsMenuTransitionPercent < 1) {
+      g_PreviousOptionsMenuTextList = (undefined4 *)0x0;
+      g_OptionsMenuTransitionPercent = 0;
     }
   }
-  local_8 = DAT_007241f0;
-  iVar5 = GetBitMapStructValue_2();
+  local_8 = g_OptionsMenuTransitionPercent;
+  iVar5 = IsHardware3DGraphicsMode();
   if ((iVar5 == 0) && (local_8 < 0x32)) {
     local_8 = 0;
   }
@@ -108,41 +108,44 @@ LAB_0049f2a0:
       } while (local_c != 0);
     }
   }
-  if (DAT_007241f0 == 100) {
+  if (g_OptionsMenuTransitionPercent == 100) {
     iVar3 = GetWindowWidth_Stub();
     if (-1 < param_2) {
       cVar6 = DAT_00516b74;
-      if (DAT_007241f4 < '\x10') {
+      if (g_OptionsMenuCursorPulse < '\x10') {
         cVar6 = DAT_00516b74 << 1;
       }
-      DAT_007241f4 = DAT_007241f4 + cVar6;
-      if (DAT_007241f4 < ' ') {
-        if (DAT_007241f4 < '\0') {
-          DAT_007241f4 = '\0';
+      g_OptionsMenuCursorPulse = g_OptionsMenuCursorPulse + cVar6;
+      if (g_OptionsMenuCursorPulse < ' ') {
+        if (g_OptionsMenuCursorPulse < '\0') {
+          g_OptionsMenuCursorPulse = '\0';
           DAT_00516b74 = '\x01';
         }
       }
       else {
-        DAT_007241f4 = '\x1f';
+        g_OptionsMenuCursorPulse = '\x1f';
         DAT_00516b74 = -1;
       }
       iVar5 = GetWindowWidth_Stub();
       iVar3 = iVar5 * param_2 + -1 + iVar4 + iVar3 * 2;
       iVar5 = iVar2 / 2;
-      iVar4 = GetWindowWidth_Stub(1,0xda,CONCAT22((short)(iVar2 >> 0x1f),(short)DAT_007241f4),0xf,
-                                  0xf,uVar7,1,0,1,0);
+      iVar4 = GetWindowWidth_Stub(1,0xda,CONCAT22((short)(iVar2 >> 0x1f),
+                                                  (short)g_OptionsMenuCursorPulse),0xf,0xf,uVar7,1,0
+                                  ,1,0);
       iVar4 = GetWindowWidth_stub2(iVar4 + 1);
       iVar4 = GetWindowWidth_stub2(iVar3,iVar5 - iVar4);
-      SetFontBrightness(iVar4 + iVar11);
-      iVar4 = GetWindowWidth_Stub(CONCAT22(extraout_var,(short)DAT_007241f4) + 1,0xda,
-                                  -CONCAT22(extraout_var,(short)DAT_007241f4),0xf,0xf,uVar7,1,0,1,0)
-      ;
+      DrawTexturedQuad(iVar4 + iVar11);
+      iVar4 = GetWindowWidth_Stub(CONCAT22(extraout_var,(short)g_OptionsMenuCursorPulse) + 1,0xda,
+                                  -CONCAT22(extraout_var,(short)g_OptionsMenuCursorPulse),0xf,0xf,
+                                  uVar7,1,0,1,0);
       iVar4 = GetWindowWidth_stub2(iVar4 + 1);
-      SetFontBrightness(iVar5 + iVar11,iVar3,iVar5 - iVar4);
+      DrawTexturedQuad(iVar5 + iVar11,iVar3,iVar5 - iVar4);
     }
   }
-  FUN_0049f560((float)(DAT_007241f0 * iVar2) * _DAT_004ba2b8,
-               (float)(DAT_007241f0 * iVar10) * _DAT_004ba2b8);
+  DrawOptionsMenuBackdrop_Stub
+            ((float)(g_OptionsMenuTransitionPercent * iVar2) * _DAT_004ba2b8,
+             (float)(g_OptionsMenuTransitionPercent * iVar10) * _DAT_004ba2b8);
   return 1;
 }
+
 

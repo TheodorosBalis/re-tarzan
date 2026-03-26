@@ -1,4 +1,4 @@
-/* Address: 0x0049C7E0 */
+// Address: 0x0049C7E0
 
 undefined4 SetActiveBitmapSlot(int param_1)
 
@@ -15,4 +15,5 @@ undefined4 SetActiveBitmapSlot(int param_1)
   DAT_00515de0 = param_1;
   return 1;
 }
+
 

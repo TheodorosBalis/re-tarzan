@@ -1,4 +1,4 @@
-/* Address: 0x004B6420 */
+// Address: 0x004B6420
 
 uint * CopyFilePathsToMem(uint *param_1,uint *param_2)
 
@@ -45,4 +45,5 @@ LAB_004b6508:
     puVar4 = puVar4 + 1;
   } while( true );
 }
+
 

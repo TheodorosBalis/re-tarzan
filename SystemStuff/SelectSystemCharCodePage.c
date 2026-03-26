@@ -1,4 +1,4 @@
-/* Address: 0x004B775C */
+// Address: 0x004B775C
 
 int SelectSystemCharCodePage(int param_1)
 
@@ -27,4 +27,5 @@ int SelectSystemCharCodePage(int param_1)
   DAT_00c46e50 = (uint)bVar2;
   return param_1;
 }
+
 

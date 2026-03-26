@@ -1,4 +1,4 @@
-/* Address: 0x004ABE60 */
+// Address: 0x004ABE60
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -14,4 +14,5 @@ void ScanInputsInTransition(void)
   _DAT_0051cf58 = 0;
   return;
 }
+
 

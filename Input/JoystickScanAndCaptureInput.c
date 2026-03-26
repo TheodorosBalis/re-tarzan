@@ -1,4 +1,4 @@
-/* Address: 0x0049DE10 */
+// Address: 0x0049DE10
 
 void JoystickScanAndCaptureInput(void)
 
@@ -42,4 +42,5 @@ void JoystickScanAndCaptureInput(void)
   CaptureKInputsInBuffer();
   return;
 }
+
 

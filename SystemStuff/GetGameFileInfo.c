@@ -1,4 +1,4 @@
-/* Address: 0x004B1345 */
+// Address: 0x004B1345
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -114,4 +114,5 @@ LAB_004b1469:
   bVar2 = false;
   goto LAB_004b1389;
 }
+
 

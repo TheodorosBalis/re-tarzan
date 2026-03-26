@@ -1,4 +1,4 @@
-/* Address: 0x004A8BE0 */
+// Address: 0x004A8BE0
 
 void CheckIfSoundIsAvailableAndRunOrSomething(void)
 
@@ -26,4 +26,5 @@ void CheckIfSoundIsAvailableAndRunOrSomething(void)
   }
   return;
 }
+
 

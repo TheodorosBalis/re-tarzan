@@ -1,4 +1,4 @@
-/* Address: 0x004B6852 */
+// Address: 0x004B6852
 
 undefined4 SetOsHandleForFileDescriptor(uint param_1,HANDLE param_2)
 
@@ -34,4 +34,5 @@ LAB_004b68ab:
   *puVar1 = 0;
   return 0xffffffff;
 }
+
 

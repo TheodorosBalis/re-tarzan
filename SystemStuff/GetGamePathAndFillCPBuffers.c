@@ -1,4 +1,4 @@
-/* Address: 0x004B56F4 */
+// Address: 0x004B56F4
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -29,4 +29,5 @@ void GetGamePathAndFillCPBuffers(void)
   _DAT_00c46c84 = local_8 + -1;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x0049E0F0 */
+// Address: 0x0049E0F0
 
 void CaptureKInputsInBuffer(void)
 
@@ -24,4 +24,5 @@ void CaptureKInputsInBuffer(void)
   } while (iVar2 < 0x100);
   return;
 }
+
 

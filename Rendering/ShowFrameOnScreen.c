@@ -1,4 +1,4 @@
-/* Address: 0x0049C7A0 */
+// Address: 0x0049C7A0
 
 void ShowFrameOnScreen(void)
 
@@ -18,10 +18,11 @@ void ShowFrameOnScreen(void)
     FUN_00497490();
     return;
   case 5:
-    FUN_0049b440();
+    PresentBackBufferWithGdi();
     return;
   default:
     return;
   }
 }
+
 

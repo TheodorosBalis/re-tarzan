@@ -1,4 +1,4 @@
-/* Address: 0x004A8A20 */
+// Address: 0x004A8A20
 
 void FreeDSound(void)
 
@@ -8,15 +8,15 @@ void FreeDSound(void)
   FUN_004a89f0();
   DAT_009e4a60 = 0;
   FUN_004a8930();
-  CheckForLegacyLib_stub();
-  if (DAT_009e4a30 != (int *)0x0) {
-    (**(code **)(*DAT_009e4a30 + 8))(DAT_009e4a30);
+  InitAudioLine();
+  if (g_DSound3DListener != (int *)0x0) {
+    (**(code **)(*g_DSound3DListener + 8))(g_DSound3DListener);
   }
-  if (DAT_009e4a2c != (int *)0x0) {
-    (**(code **)(*DAT_009e4a2c + 8))(DAT_009e4a2c);
+  if (g_PrimarySoundBuffer != (int *)0x0) {
+    (**(code **)(*g_PrimarySoundBuffer + 8))(g_PrimarySoundBuffer);
   }
-  if (DAT_009e4a28 != (int *)0x0) {
-    (**(code **)(*DAT_009e4a28 + 8))(DAT_009e4a28);
+  if (g_DirectSound != (int *)0x0) {
+    (**(code **)(*g_DirectSound + 8))(g_DirectSound);
   }
   if (DAT_009e4a24 != (HMODULE)0x0) {
     FreeLibrary(DAT_009e4a24);
@@ -24,4 +24,5 @@ void FreeDSound(void)
   SetupAudioBuffers();
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004B6A7D */
+// Address: 0x004B6A7D
 
 uint AllocMemAndFetchGameFile(LPCSTR param_1,uint param_2,uint param_3,uint param_4)
 
@@ -165,4 +165,5 @@ LAB_004b6d3e:
   LeaveCSforObjectInTable2(uVar3);
   return uVar2;
 }
+
 

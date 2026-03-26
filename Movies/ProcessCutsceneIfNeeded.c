@@ -1,4 +1,4 @@
-/* Address: 0x004940E0 */
+// Address: 0x004940E0
 
 void ProcessCutsceneIfNeeded(void)
 
@@ -14,4 +14,5 @@ void ProcessCutsceneIfNeeded(void)
   }
   return;
 }
+
 

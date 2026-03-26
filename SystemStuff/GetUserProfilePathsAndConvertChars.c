@@ -1,4 +1,4 @@
-/* Address: 0x004B5941 */
+// Address: 0x004B5941
 
 LPSTR GetUserProfilePathsAndConvertChars(void)
 
@@ -84,4 +84,5 @@ LAB_004b5998:
   FreeEnvironmentStringsA(pCVar9);
   return pCVar6;
 }
+
 

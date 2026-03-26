@@ -1,4 +1,4 @@
-/* Address: 0x004B6571 */
+// Address: 0x004B6571
 
 LPVOID SafelyMemAlloc(int param_1,int param_2)
 
@@ -76,4 +76,5 @@ LAB_004b665e:
     }
   } while( true );
 }
+
 

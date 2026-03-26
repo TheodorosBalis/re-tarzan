@@ -1,4 +1,4 @@
-/* Address: 0x004AFF2C */
+// Address: 0x004AFF2C
 
 void AllocateMemOnOS2(uint param_1)
 
@@ -63,4 +63,5 @@ LAB_004b000b:
   ExceptionList = local_14;
   return;
 }
+
 

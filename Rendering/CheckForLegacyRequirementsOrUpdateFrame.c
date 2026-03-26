@@ -1,4 +1,4 @@
-/* Address: 0x0049C900 */
+// Address: 0x0049C900
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -98,4 +98,5 @@ LAB_0049c9af:
   ShowFrameOnScreen();
   return 0;
 }
+
 

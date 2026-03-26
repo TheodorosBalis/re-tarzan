@@ -1,4 +1,4 @@
-/* Address: 0x0049CB20 */
+// Address: 0x0049CB20
 
 undefined4
 LoadSoundOrUpdateGraphixBufferForCutscene
@@ -37,4 +37,5 @@ LoadSoundOrUpdateGraphixBufferForCutscene
   }
   return 0;
 }
+
 

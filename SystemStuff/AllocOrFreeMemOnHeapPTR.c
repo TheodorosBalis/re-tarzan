@@ -1,4 +1,4 @@
-/* Address: 0x004AFE05 */
+// Address: 0x004AFE05
 
 void AllocOrFreeMemOnHeapPTR(LPVOID param_1)
 
@@ -55,4 +55,5 @@ LAB_004afed1:
   ExceptionList = local_14;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004AFA50 */
+// Address: 0x004AFA50
 
 undefined4 DrawGraphicsTextinMem_2(undefined1 *param_1,undefined4 param_2)
 
@@ -23,4 +23,5 @@ undefined4 DrawGraphicsTextinMem_2(undefined1 *param_1,undefined4 param_2)
   }
   return uVar1;
 }
+
 

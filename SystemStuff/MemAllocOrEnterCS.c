@@ -1,4 +1,4 @@
-/* Address: 0x004B1C6C */
+// Address: 0x004B1C6C
 
 void MemAllocOrEnterCS(int param_1)
 
@@ -25,4 +25,5 @@ void MemAllocOrEnterCS(int param_1)
   EnterCriticalSection((LPCRITICAL_SECTION)*piVar1);
   return;
 }
+
 

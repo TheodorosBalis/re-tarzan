@@ -1,4 +1,4 @@
-/* Address: 0x004B16DA */
+// Address: 0x004B16DA
 
 uint LoadEfGinMemSafely(undefined4 *param_1)
 
@@ -50,4 +50,5 @@ uint LoadEfGinMemSafely(undefined4 *param_1)
   }
   return 0xffffffff;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x0049AE80 */
+// Address: 0x0049AE80
 
 void DrawGraphicsTextinMem
                (undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
@@ -14,4 +14,5 @@ void DrawGraphicsTextinMem
   DrawGraphicsText(param_1,param_2,uVar1);
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004A8810 */
+// Address: 0x004A8810
 
 void DoDsoundSetupStuff(void)
 
@@ -33,8 +33,8 @@ void DoDsoundSetupStuff(void)
   local_14 = 0x14;
   local_10 = 0x12;
   local_c = 0x80;
-  if ((((DAT_009e4a28 != (int *)0x0) &&
-       ((**(code **)(*DAT_009e4a28 + 0xc))(DAT_009e4a28,&local_14,&DAT_009e4a34,0),
+  if ((((g_DirectSound != (int *)0x0) &&
+       ((**(code **)(*g_DirectSound + 0xc))(g_DirectSound,&local_14,&DAT_009e4a34,0),
        DAT_009e4a34 != (undefined4 *)0x0)) &&
       ((**(code **)*DAT_009e4a34)(DAT_009e4a34,&DAT_004ba3e0,&DAT_009e4a38),
       DAT_009e4a38 != (undefined4 *)0x0)) &&
@@ -52,4 +52,5 @@ void DoDsoundSetupStuff(void)
   FUN_004a8930();
   return;
 }
+
 

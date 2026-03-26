@@ -1,4 +1,4 @@
-/* Address: 0x004B25F3 */
+// Address: 0x004B25F3
 
 int GetOSresult(void)
 
@@ -90,4 +90,5 @@ int GetOSresult(void)
   }
   return iVar4;
 }
+
 

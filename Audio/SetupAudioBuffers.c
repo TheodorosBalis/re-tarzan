@@ -1,4 +1,4 @@
-/* Address: 0x004A8980 */
+// Address: 0x004A8980
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -26,9 +26,10 @@ void SetupAudioBuffers(void)
   DAT_009e4a58 = 0;
   DAT_009e4a54 = 0;
   DAT_009e4a48 = 0;
-  DAT_009e4a2c = 0;
-  DAT_009e4a30 = 0;
-  DAT_009e4a64 = 0;
+  g_PrimarySoundBuffer = 0;
+  g_DSound3DListener = 0;
+  g_IsDSoundInitialized = 0;
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004B698F */
+// Address: 0x004B698F
 
 void EnsureObjectCriticalSectionAndEnter(uint param_1)
 
@@ -19,4 +19,5 @@ void EnsureObjectCriticalSectionAndEnter(uint param_1)
   EnterCriticalSection((LPCRITICAL_SECTION)((&DAT_00c47260)[(int)param_1 >> 5] + 0xc + iVar2));
   return;
 }
+
 

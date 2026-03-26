@@ -1,4 +1,4 @@
-/* Address: 0x0049AFE0 */
+// Address: 0x0049AFE0
 
 void DrawGraphicsTexIfNeeded(void)
 
@@ -178,4 +178,5 @@ LAB_0049b097:
 switchD_0049b01e_default:
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x0049CD80 */
+// Address: 0x0049CD80
 
 void ConfirmGraphicsInitialized(void)
 
@@ -24,4 +24,5 @@ void ConfirmGraphicsInitialized(void)
     return;
   }
 }
+
 

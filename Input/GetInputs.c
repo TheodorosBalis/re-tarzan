@@ -1,4 +1,4 @@
-/* Address: 0x004383E0 */
+// Address: 0x004383E0
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -17,4 +17,5 @@ void GetInputs(void)
   _DAT_0051cf40 = (&MenuKeyJustReleased)[DAT_004eca78 * 3] & (&MenuKeyPressed)[DAT_004eca78 * 3];
   return;
 }
+
 

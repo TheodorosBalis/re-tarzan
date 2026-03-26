@@ -1,4 +1,4 @@
-/* Address: 0x004B55E3 */
+// Address: 0x004B55E3
 
 byte * MoreStringConversionsInMemory(void)
 
@@ -37,4 +37,5 @@ LAB_004b5620:
   }
   return pbVar4;
 }
+
 

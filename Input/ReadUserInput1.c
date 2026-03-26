@@ -1,4 +1,4 @@
-/* Address: 0x004AEA70 */
+// Address: 0x004AEA70
 
 void ReadUserInput1(void)
 
@@ -14,7 +14,7 @@ void ReadUserInput1(void)
   undefined1 local_24 [4];
   undefined1 local_20 [32];
   
-  if (WindowHandlerValue1 != 2) {
+  if (g_MainWindowActivationState != 2) {
     return;
   }
   if (DAT_00724ed0 == 0) {
@@ -44,7 +44,8 @@ void ReadUserInput1(void)
     iVar1 = GetUserInput_stub(0x72);
     if (iVar1 != 0) {
       if ((((DAT_00c46c5c < 0) && (iVar1 = FUN_004abd30(), iVar1 != 0)) &&
-          (iVar1 = FUN_0049e060(0x11), iVar1 != 0)) && (iVar1 = FUN_0049e060(0x10), iVar1 != 0)) {
+          (iVar1 = IsControlBindingPressed(0x11), iVar1 != 0)) &&
+         (iVar1 = IsControlBindingPressed(0x10), iVar1 != 0)) {
         DAT_00c46c5c = 10;
         FUN_004abcf0();
         InitSoundAndNewGameStateFile(0xac);
@@ -86,8 +87,8 @@ LAB_004aebfd:
   if ((iVar1 != 0) &&
      (iVar1 = LoadSoundOrUpdateGraphixBufferForCutscene(0,&local_28,&local_2c,&local_30,local_24),
      iVar1 != 0)) {
-    PlayAudioLine();
-    FUN_004a1a10();
+    PauseAudioLinePlayback();
+    StopActiveStreamedWork();
     uVar5 = GetWindowWidth();
     uVar3 = GetWindowHeight();
     DAT_00c46c60 = DAT_00c46c60 + 1;
@@ -101,4 +102,5 @@ LAB_004aebfd:
   }
   return;
 }
+
 

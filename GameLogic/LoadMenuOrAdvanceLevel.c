@@ -1,0 +1,71 @@
+// Address: 0x0047EE70
+
+void LoadMenuOrAdvanceLevel(void)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  undefined4 uVar3;
+  
+  puVar2 = &g_LevelCompleteTextAnchor;
+  for (iVar1 = 7; iVar1 != 0; iVar1 = iVar1 + -1) {
+    *puVar2 = 0;
+    puVar2 = puVar2 + 1;
+  }
+  MenuState = 0;
+  LoadFonts(&PTR_DAT_0050df58,&DAT_00c46024);
+  InitKeyPressed();
+  ResetEntitySoundSlotLists();
+  if (((g_SelectedLevelIndex < '\0') || ((&DAT_004f26a4)[g_SelectedLevelIndex * 0xf] != -1)) ||
+     ((short)g_LoadTransitionFlags != -0x7fff)) {
+    uVar3 = 0x16;
+  }
+  else {
+    uVar3 = 0x15;
+  }
+  SelectLevelAudioProfile(uVar3);
+  g_PendingTransitionPayload = 0;
+  SetActiveMenuContext(&g_MenuSceneContext);
+  ResetMenuModelSet(&LevelCompleteObjects);
+  LoadNecessaryGSXFontsAndModels(&LevelCompleteObjects);
+  ResetMenuModelSet(&ModelJane);
+  LoadNecessaryGSXFontsAndModels(&ModelJane);
+  LoadMenuGraphicBlock(&Options_SelectMovieLabels);
+  FUN_004abcc0();
+  ptrToDecideWhichMenu = 0;
+  if (-1 < g_SelectedLevelIndex) {
+    if (((&DAT_004f26a4)[g_SelectedLevelIndex * 0xf] == -1) &&
+       ((short)g_LoadTransitionFlags == -0x7fff)) {
+      g_SelectedLevelIndex = -1;
+      ProcessMovieClipOrLogo(0x4020,0x1fe,0,0x1000);
+      ProcessMovieClipOrLogo(0x4022,0x1fc,0,0x1000);
+      ProcessMovieClipOrLogo(0x4023,0x1f7,0,0x1000);
+      ProcessMovieClipOrLogo(0x401c,0x1ef,0,0x1000);
+      ProcessMovieClipOrLogo(0x401d,0x1ea,0,0x1000);
+      ProcessMovieClipOrLogo(0x401e,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x4030,0x1ea,0,0x1000);
+      ProcessMovieClipOrLogo(0x4031,0x1ea,0,0x1000);
+      ProcessMovieClipOrLogo(0x4024,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x4025,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x4029,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x402a,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x402f,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x402d,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x402e,500,0,0x1000);
+      ProcessMovieClipOrLogo(0x401f,1000,0,0x1000);
+    }
+    if ((-1 < g_SelectedLevelIndex) && ((short)g_LoadTransitionFlags == -0x7fff)) {
+      g_LevelCompleteInputMode = (int)g_SelectedLevelIndex & 1;
+      ptrToDecideWhichMenu = 0;
+      ptrToDecideWhichMenu2 = &g_MenuDescriptor_LevelComplete;
+      CMenu__LevelComplete_Enter();
+      return;
+    }
+  }
+  g_LevelTransitionContext._2_1_ = 0x16;
+  ptrToDecideWhichMenu2 = &PTR_MainMenu_MainFont_004f1fc0;
+  EnterGameMenu();
+  return;
+}
+
+

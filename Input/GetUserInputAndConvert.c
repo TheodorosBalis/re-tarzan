@@ -1,4 +1,4 @@
-/* Address: 0x0049E080 */
+// Address: 0x0049E080
 
 uint GetUserInputAndConvert(int param_1)
 
@@ -11,4 +11,5 @@ uint GetUserInputAndConvert(int param_1)
   (&InputBuffer)[param_1] = uVar2;
   return ~uVar2 & uVar1 & 0x8001;
 }
+
 

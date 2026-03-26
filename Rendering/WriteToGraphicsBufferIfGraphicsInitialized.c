@@ -1,4 +1,4 @@
-/* Address: 0x0049B4A0 */
+// Address: 0x0049B4A0
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -28,4 +28,5 @@ undefined4 WriteToGraphicsBufferIfGraphicsInitialized(uint param_1,int *param_2,
   }
   return 0;
 }
+
 

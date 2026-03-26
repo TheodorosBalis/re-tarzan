@@ -1,4 +1,4 @@
-/* Address: 0x004A15F0 */
+// Address: 0x004A15F0
 
 void InitLegacyAudioIfOldWindows(void)
 
@@ -32,4 +32,5 @@ void InitLegacyAudioIfOldWindows(void)
   }
   return;
 }
+
 

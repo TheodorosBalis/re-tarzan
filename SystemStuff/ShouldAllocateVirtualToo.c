@@ -1,4 +1,4 @@
-/* Address: 0x004B2FE9 */
+// Address: 0x004B2FE9
 
 undefined ** ShouldAllocateVirtualToo(void)
 
@@ -65,4 +65,5 @@ undefined ** ShouldAllocateVirtualToo(void)
   }
   return (undefined **)0x0;
 }
+
 

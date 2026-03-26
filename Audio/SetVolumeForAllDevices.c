@@ -1,4 +1,4 @@
-/* Address: 0x004A1800 */
+// Address: 0x004A1800
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -31,4 +31,5 @@ void SetVolumeForAllDevices(int param_1)
   }
   return;
 }
+
 

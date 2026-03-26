@@ -1,4 +1,4 @@
-/* Address: 0x004B0CDA */
+// Address: 0x004B0CDA
 
 /* Library Function - Single Match
     __freebuf
@@ -17,4 +17,5 @@ void __cdecl AllocOrFreeMem(FILE *_File)
   }
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004B3704 */
+// Address: 0x004B3704
 
 DWORD * GetOrCreateTlsBlock(void)
 
@@ -28,4 +28,5 @@ LAB_004b375f:
   SetLastError(dwErrCode);
   return lpTlsValue;
 }
+
 

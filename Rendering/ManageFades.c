@@ -1,4 +1,4 @@
-/* Address: 0x00429430 */
+// Address: 0x00429430
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -35,4 +35,5 @@ void ManageFades(void)
   _DAT_0051c4a8 = DAT_0051c578;
   return;
 }
+
 

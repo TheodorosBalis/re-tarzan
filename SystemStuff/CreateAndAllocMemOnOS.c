@@ -1,4 +1,4 @@
-/* Address: 0x004B273B */
+// Address: 0x004B273B
 
 undefined4 CreateAndAllocMemOnOS(int param_1)
 
@@ -24,4 +24,5 @@ undefined4 CreateAndAllocMemOnOS(int param_1)
   }
   return 0;
 }
+
 

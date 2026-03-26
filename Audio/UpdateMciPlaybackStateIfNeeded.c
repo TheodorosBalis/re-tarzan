@@ -1,4 +1,4 @@
-/* Address: 0x004941C0 */
+// Address: 0x004941C0
 
 void UpdateMciPlaybackStateIfNeeded(void)
 
@@ -17,4 +17,5 @@ void UpdateMciPlaybackStateIfNeeded(void)
   }
   return;
 }
+
 

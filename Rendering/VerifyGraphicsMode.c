@@ -1,4 +1,4 @@
-/* Address: 0x0049C6C0 */
+// Address: 0x0049C6C0
 
 undefined4 VerifyGraphicsMode(void)
 
@@ -20,4 +20,5 @@ undefined4 VerifyGraphicsMode(void)
   }
   return 1;
 }
+
 

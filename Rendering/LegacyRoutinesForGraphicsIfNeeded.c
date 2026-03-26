@@ -1,4 +1,4 @@
-/* Address: 0x0049CE70 */
+// Address: 0x0049CE70
 
 void LegacyRoutinesForGraphicsIfNeeded(void)
 
@@ -11,4 +11,5 @@ void LegacyRoutinesForGraphicsIfNeeded(void)
   GraphicsMode = 0;
   return;
 }
+
 

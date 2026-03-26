@@ -1,4 +1,4 @@
-/* Address: 0x0049B5F0 */
+// Address: 0x0049B5F0
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -41,4 +41,5 @@ undefined4 InitBackBufferDIBSection(HWND param_1)
   isGraphicsInitialized = 1;
   return 1;
 }
+
 

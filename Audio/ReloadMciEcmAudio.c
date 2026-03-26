@@ -1,4 +1,4 @@
-/* Address: 0x004942D0 */
+// Address: 0x004942D0
 
 int ReloadMciEcmAudio(undefined4 param_1)
 
@@ -26,4 +26,5 @@ int ReloadMciEcmAudio(undefined4 param_1)
   }
   return 0;
 }
+
 

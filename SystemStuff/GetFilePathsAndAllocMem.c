@@ -1,4 +1,4 @@
-/* Address: 0x004B563B */
+// Address: 0x004B563B
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -49,4 +49,5 @@ void GetFilePathsAndAllocMem(void)
   _DAT_00c48388 = 1;
   return;
 }
+
 

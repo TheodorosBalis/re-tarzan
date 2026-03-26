@@ -1,4 +1,4 @@
-/* Address: 0x004B369D */
+// Address: 0x004B369D
 
 undefined4 InitThreadLocalState(void)
 
@@ -24,4 +24,5 @@ undefined4 InitThreadLocalState(void)
   }
   return 0;
 }
+
 

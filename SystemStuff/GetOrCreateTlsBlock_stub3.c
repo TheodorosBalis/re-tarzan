@@ -1,4 +1,4 @@
-/* Address: 0x004B15F9 */
+// Address: 0x004B15F9
 
 int GetOrCreateTlsBlock_stub3(void)
 
@@ -8,4 +8,5 @@ int GetOrCreateTlsBlock_stub3(void)
   iVar1 = GetOrCreateTlsBlock();
   return iVar1 + 0xc;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x004AC480 */
+// Address: 0x004AC480
 
 void SelectECMfileAndInitAudio(int param_1)
 
@@ -81,4 +81,5 @@ void SelectECMfileAndInitAudio(int param_1)
     return;
   }
 }
+
 

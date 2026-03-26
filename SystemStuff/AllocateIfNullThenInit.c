@@ -1,4 +1,4 @@
-/* Address: 0x004AFF00 */
+// Address: 0x004AFF00
 
 /* Library Function - Single Match
     __nh_malloc
@@ -25,4 +25,5 @@ void * __cdecl AllocateIfNullThenInit(size_t _Size,int _NhFlag)
   }
   return (void *)0x0;
 }
+
 

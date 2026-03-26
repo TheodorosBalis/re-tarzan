@@ -1,4 +1,4 @@
-/* Address: 0x004A1890 */
+// Address: 0x004A1890
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
@@ -19,4 +19,5 @@ void SetAuxVolumePercent(int param_1)
   }
   return;
 }
+
 

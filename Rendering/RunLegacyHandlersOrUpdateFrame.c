@@ -1,4 +1,4 @@
-/* Address: 0x0049C820 */
+// Address: 0x0049C820
 
 void RunLegacyHandlersOrUpdateFrame(void)
 
@@ -21,7 +21,7 @@ void RunLegacyHandlersOrUpdateFrame(void)
         SetActiveBitmapSlot(iVar2);
         iVar2 = CheckForLegacyRequirementsOrUpdateFrame();
       } while (iVar2 < 0);
-      FUN_0049c660(0);
+      ConsumeGraphicsModeFailure(0);
       return;
     }
     iVar2 = CheckForLegacyRequirementsOrUpdateFrame();
@@ -39,4 +39,5 @@ void RunLegacyHandlersOrUpdateFrame(void)
   }
   return;
 }
+
 

@@ -1,4 +1,4 @@
-/* Address: 0x00494620 */
+// Address: 0x00494620
 
 undefined4 LoadECMinChunks(void)
 
@@ -57,4 +57,5 @@ undefined4 LoadECMinChunks(void)
     iVar2 = LoadGameFileInBuffer(&stack0x00000000,1,0x4010,iVar1);
   } while( true );
 }
+
 

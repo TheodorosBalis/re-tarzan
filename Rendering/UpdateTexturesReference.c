@@ -1,4 +1,4 @@
-/* Address: 0x004A4C00 */
+// Address: 0x004A4C00
 
 void UpdateTexturesReference(uint param_1,int param_2,int param_3,int param_4,int param_5)
 
@@ -14,14 +14,14 @@ void UpdateTexturesReference(uint param_1,int param_2,int param_3,int param_4,in
   undefined4 *puVar9;
   
   iVar8 = DAT_005175f0;
-  (&DAT_009cef10)[param_1 & 0xf] = 1;
+  (&g_DirtyTexturePageFlags)[param_1 & 0xf] = 1;
   iVar1 = (param_1 & 0xf) * 0x10000;
   if (iVar8 == 0) {
     if (0 < param_5) {
-      puVar4 = (undefined4 *)&DAT_0077e7b0;
+      puVar4 = (undefined4 *)&g_MenuTextureAtlasPixels;
       iVar8 = (param_3 * 0x100 + iVar1 + param_2) * 2;
       do {
-        puVar9 = (undefined4 *)(DAT_009cf104 + iVar8);
+        puVar9 = (undefined4 *)(g_GraphicsPageBufferBase + iVar8);
         iVar8 = iVar8 + 0x200;
         puVar7 = puVar4;
         for (uVar3 = (uint)(param_4 * 2) >> 2; uVar3 != 0; uVar3 = uVar3 - 1) {
@@ -40,7 +40,7 @@ void UpdateTexturesReference(uint param_1,int param_2,int param_3,int param_4,in
     }
   }
   else if (0 < param_5) {
-    puVar5 = &DAT_0077e7b0;
+    puVar5 = &g_MenuTextureAtlasPixels;
     iVar8 = (param_3 * 0x100 + iVar1 + param_2) * 2;
     do {
       puVar2 = puVar5;
@@ -49,7 +49,7 @@ void UpdateTexturesReference(uint param_1,int param_2,int param_3,int param_4,in
       if (0 < param_4) {
         do {
           iVar6 = iVar6 + -1;
-          *(ushort *)(iVar1 + DAT_009cf104) = (*puVar2 & 0xffe0) << 1 | *puVar2 & 0x3f;
+          *(ushort *)(iVar1 + g_GraphicsPageBufferBase) = (*puVar2 & 0xffe0) << 1 | *puVar2 & 0x3f;
           puVar2 = puVar2 + 1;
           iVar1 = iVar1 + 2;
         } while (iVar6 != 0);
@@ -62,4 +62,5 @@ void UpdateTexturesReference(uint param_1,int param_2,int param_3,int param_4,in
   }
   return;
 }
+
 

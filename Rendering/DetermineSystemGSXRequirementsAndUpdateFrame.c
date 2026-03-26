@@ -1,4 +1,4 @@
-/* Address: 0x0049CDC0 */
+// Address: 0x0049CDC0
 
 undefined4 DetermineSystemGSXRequirementsAndUpdateFrame(int param_1)
 
@@ -23,7 +23,7 @@ undefined4 DetermineSystemGSXRequirementsAndUpdateFrame(int param_1)
   iVar1 = InitBackBufferDIBSection(param_1);
   if (iVar1 == 0) {
     LegacyRoutinesForGraphicsIfNeeded();
-    InternalError(s_Gfx_Init::_00515e20);
+    InternalError(s_Gfx_Init___00515e20);
     DAT_00722968 = 0;
     return 0;
   }
@@ -37,4 +37,5 @@ undefined4 DetermineSystemGSXRequirementsAndUpdateFrame(int param_1)
   DAT_00722968 = 1;
   return 1;
 }
+
 

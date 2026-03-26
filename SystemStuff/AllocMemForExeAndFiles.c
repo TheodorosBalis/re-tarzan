@@ -1,4 +1,4 @@
-/* Address: 0x004B19F4 */
+// Address: 0x004B19F4
 
 void AllocMemForExeAndFiles(void)
 
@@ -106,4 +106,5 @@ LAB_004b1b99:
     }
   } while( true );
 }
+
 

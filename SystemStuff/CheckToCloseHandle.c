@@ -1,4 +1,4 @@
-/* Address: 0x004B0C57 */
+// Address: 0x004B0C57
 
 undefined4 CheckToCloseHandle(uint param_1)
 
@@ -38,4 +38,5 @@ LAB_004b0ca7:
   }
   return uVar5;
 }
+
 

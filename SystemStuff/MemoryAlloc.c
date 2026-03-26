@@ -1,4 +1,4 @@
-/* Address: 0x004B2798 */
+// Address: 0x004B2798
 
 undefined4 MemoryAlloc(undefined4 param_1)
 
@@ -14,4 +14,5 @@ undefined4 MemoryAlloc(undefined4 param_1)
   DAT_00c47228 = 0x10;
   return 1;
 }
+
 

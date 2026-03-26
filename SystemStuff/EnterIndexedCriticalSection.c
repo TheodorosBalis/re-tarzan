@@ -1,4 +1,4 @@
-/* Address: 0x004B0B85 */
+// Address: 0x004B0B85
 
 void EnterIndexedCriticalSection(int param_1,int param_2)
 
@@ -10,4 +10,5 @@ void EnterIndexedCriticalSection(int param_1,int param_2)
   EnterCriticalSection((LPCRITICAL_SECTION)(param_2 + 0x20));
   return;
 }
+
 

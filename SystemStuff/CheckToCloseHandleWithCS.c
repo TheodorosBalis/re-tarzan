@@ -1,4 +1,4 @@
-/* Address: 0x004B0BFA */
+// Address: 0x004B0BFA
 
 undefined4 CheckToCloseHandleWithCS(uint param_1)
 
@@ -19,4 +19,5 @@ undefined4 CheckToCloseHandleWithCS(uint param_1)
   *puVar2 = 0;
   return 0xffffffff;
 }
+
 

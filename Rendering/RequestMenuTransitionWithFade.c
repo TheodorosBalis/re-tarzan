@@ -1,4 +1,4 @@
-/* Address: 0x00452B50 */
+// Address: 0x00452B50
 
 void RequestMenuTransitionWithFade(int param_1)
 
@@ -14,4 +14,5 @@ void RequestMenuTransitionWithFade(int param_1)
   }
   return;
 }
+
 

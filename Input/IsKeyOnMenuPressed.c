@@ -1,4 +1,4 @@
-/* Address: 0x00453260 */
+// Address: 0x00453260
 
 void IsKeyOnMenuPressed(void)
 
@@ -15,4 +15,5 @@ void IsKeyOnMenuPressed(void)
   } while (iVar2 != 0);
   return;
 }
+
 

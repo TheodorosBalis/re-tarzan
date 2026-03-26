@@ -1,4 +1,4 @@
-/* Address: 0x004AC360 */
+// Address: 0x004AC360
 
 bool CaptureInputsInCutscene(int param_1)
 
@@ -9,19 +9,20 @@ bool CaptureInputsInCutscene(int param_1)
   if (param_1 == 0) {
     return false;
   }
-  iVar1 = FUN_0049e060(0xd);
+  iVar1 = IsControlBindingPressed(0xd);
   if (iVar1 != 0) {
     return true;
   }
-  iVar1 = FUN_0049e060(0x20);
+  iVar1 = IsControlBindingPressed(0x20);
   if (iVar1 != 0) {
     return true;
   }
-  iVar1 = FUN_0049e060(0x1b);
+  iVar1 = IsControlBindingPressed(0x1b);
   if (iVar1 != 0) {
     return true;
   }
   uVar2 = CheckForJoystickInputs(0);
   return (uVar2 & 0xfffffff) != 0;
 }
+
 

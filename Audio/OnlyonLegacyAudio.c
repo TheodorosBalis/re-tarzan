@@ -1,4 +1,4 @@
-/* Address: 0x004A8C70 */
+// Address: 0x004A8C70
 
 void OnlyonLegacyAudio(void)
 
@@ -21,4 +21,5 @@ void OnlyonLegacyAudio(void)
   }
   return;
 }
+
 
