@@ -1,6 +1,6 @@
 // Address: 0x004940E0
 
-void ProcessCutsceneIfNeeded(void)
+void UpdateBackgroundMusic(void)
 
 {
   DWORD DVar1;

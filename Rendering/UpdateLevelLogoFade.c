@@ -10,7 +10,7 @@ void UpdateLevelLogoFade(uint param_1,uint param_2)
   DVar1 = timeGetTime();
   WinMessageLoop();
   UpdateAudioInGameOrOptions();
-  ProcessCutsceneIfNeeded();
+  UpdateBackgroundMusic();
   DoNothing2();
   CheckIfEfgFileNeedsLoading();
   if (0xff < (int)param_1) {

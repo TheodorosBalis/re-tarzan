@@ -13,7 +13,7 @@ void CGame__Process(void)
   DrawGraphicsTexIfNeeded();
   ProcessPauseOrOptionsMenus();
   UpdateAudioInGameOrOptions();
-  ProcessCutsceneIfNeeded();
+  UpdateBackgroundMusic();
   DoNothing2();
   CheckIfEfgFileNeedsLoading();
   iVar1 = IsGamePaused();
