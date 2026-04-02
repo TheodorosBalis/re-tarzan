@@ -26,7 +26,7 @@ void CMenu__LoadGame_ProcessInput(void)
           LoadSoundFileAndInitAudio(0xac,0,0);
           _g_LoadGameSelectionState = 1;
           InitiateFade(2,0x100);
-          InitCinematic_stub(&DAT_00c46070);
+          ResetEcmAudioPlaybackStateThunk(&DAT_00c46070);
           return;
         }
         LoadSoundFileAndInitAudio(0xaa,0,0);
