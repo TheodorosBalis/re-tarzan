@@ -1,6 +1,6 @@
 // Address: 0x00494230
 
-void LoadAndInitializeIntroCinematic(void)
+void ResetEcmAudioPlaybackState(void)
 
 {
   int iVar1;

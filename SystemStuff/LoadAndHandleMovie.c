@@ -20,7 +20,7 @@ int LoadAndHandleMovie(undefined4 param_1,undefined4 param_2)
   InitAudioLine();
   GetAppTime_FillGraphicsBuffer();
   FUN_004a8d20();
-  LoadAndInitializeIntroCinematic();
+  ResetEcmAudioPlaybackState();
   CaptureKInputsInBuffer();
   iVar1 = IsGamePaused();
   if ((iVar1 == 0) && (iVar1 = GetAndLoadBlankECMfile(param_1), iVar1 != 0)) {
