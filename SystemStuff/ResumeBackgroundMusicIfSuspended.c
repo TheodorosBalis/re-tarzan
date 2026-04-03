@@ -11,7 +11,7 @@ void ResumeBackgroundMusicIfSuspended(void)
     iVar2 = DVar1 - DAT_0053a30c;
     DAT_0053a30c = 0;
     DAT_0053a300 = DAT_0053a300 + iVar2;
-    HandleDeviceArrivalForECM();
+    ResumeBackgroundMusicAfterDeviceArrival();
     return;
   }
   return;
