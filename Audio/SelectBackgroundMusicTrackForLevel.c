@@ -1,6 +1,6 @@
 // Address: 0x004AC480
 
-void SelectECMfileAndInitAudio(int param_1)
+void SelectBackgroundMusicTrackForLevel(int param_1)
 
 {
   switch(DAT_00c46068) {

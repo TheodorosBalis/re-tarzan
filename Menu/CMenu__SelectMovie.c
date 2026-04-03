@@ -19,7 +19,7 @@ void CMenu__SelectMovie(void)
       SetActiveMenuContext(&g_MenuSceneContext);
       _g_SelectMovieState = 0;
       InitiateFade(1,0x100);
-      SelectECMfileAndInitAudio(0);
+      SelectBackgroundMusicTrackForLevel(0);
     }
   }
   else if (((_g_SelectMovieState == 2) && (FadeBrightness == 0)) && (3 < FadeStatus)) {
