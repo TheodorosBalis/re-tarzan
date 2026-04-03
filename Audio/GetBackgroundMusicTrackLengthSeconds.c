@@ -1,6 +1,6 @@
 // Address: 0x004942D0
 
-int ReloadMciEcmAudio(undefined4 param_1)
+int GetBackgroundMusicTrackLengthSeconds(undefined4 param_1)
 
 {
   MCIERROR MVar1;
