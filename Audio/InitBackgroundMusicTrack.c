@@ -10,7 +10,7 @@ void InitBackgroundMusicTrack(int param_1)
   }
   ResetBackgroundMusicPlaybackState();
   if (((0 < param_1) && (iVar1 = LoadECMFilesAndInit(), iVar1 != 0)) &&
-     (DAT_0053a314 = ReloadMciEcmAudio(param_1), DAT_0053a314 != 0)) {
+     (DAT_0053a314 = GetBackgroundMusicTrackLengthSeconds(param_1), DAT_0053a314 != 0)) {
     PlayEcmTrackFromSecond(param_1,0);
   }
   return;
