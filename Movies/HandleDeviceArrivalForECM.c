@@ -12,7 +12,7 @@ void HandleDeviceArrivalForECM(void)
       iVar1 = IsBackgroundMusicPlaying();
       if (iVar1 == 0) {
         DVar2 = timeGetTime();
-        PlayEcmTrackFromSecond(DAT_0053a310,(DVar2 - DAT_0053a300) / 1000);
+        PlayBackgroundMusicTrackFromSecond(DAT_0053a310,(DVar2 - DAT_0053a300) / 1000);
       }
     }
   }
