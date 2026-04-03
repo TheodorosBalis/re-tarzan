@@ -9,7 +9,7 @@ void UpdateBackgroundMusic(void)
     DVar1 = timeGetTime();
     if ((uint)(DAT_0053a314 * 1000) <= DVar1 - DAT_0053a300) {
       DAT_0053a304 = 0;
-      InitAudioForECMFile(DAT_0053a310);
+      InitBackgroundMusicTrack(DAT_0053a310);
     }
   }
   return;
