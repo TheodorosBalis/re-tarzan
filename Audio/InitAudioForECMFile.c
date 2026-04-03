@@ -1,6 +1,6 @@
 // Address: 0x00494280
 
-void InitAudioForECMFile(int param_1)
+void InitBackgroundMusicTrack(int param_1)
 
 {
   int iVar1;
