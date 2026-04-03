@@ -78,7 +78,7 @@ void SelectLevelAudioProfile(uint param_1)
     else {
       uVar3 = 0;
     }
-    SelectECMfileAndInitAudio(uVar3);
+    SelectBackgroundMusicTrackForLevel(uVar3);
   }
   puVar1 = DAT_00c46074;
   if (puVar2 != DAT_00c46074) {
