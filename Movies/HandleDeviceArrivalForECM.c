@@ -1,6 +1,6 @@
 // Address: 0x004944A0
 
-void HandleDeviceArrivalForECM(void)
+void ResumeBackgroundMusicAfterDeviceArrival(void)
 
 {
   int iVar1;
