@@ -8,7 +8,7 @@ void CMenu__StartGame(void)
   g_LoadTransitionFlags._0_2_ = 0;
   gCurrentCoinsCollected = 0;
   g_SelectedLevelIndex = 0;
-  ResetEcmAudioPlaybackStateThunk(&DAT_00c46070);
+  ResetBackgroundMusicPlaybackState(&DAT_00c46070);
   InitiateFade(2,0x100);
   MenuState = 2;
   return;

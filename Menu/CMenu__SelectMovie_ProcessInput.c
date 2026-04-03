@@ -41,7 +41,7 @@ void CMenu__SelectMovie_ProcessInput(void)
     LoadSoundFileAndInitAudio(0xac,0,0);
     _g_SelectMovieState = 1;
     InitiateFade(2,0x100);
-    ResetEcmAudioPlaybackStateThunk(&DAT_00c46070);
+    ResetBackgroundMusicPlaybackStateThunk(&DAT_00c46070);
   }
   return;
 }

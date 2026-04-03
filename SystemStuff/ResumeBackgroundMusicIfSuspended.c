@@ -1,6 +1,6 @@
 // Address: 0x00494180
 
-void CheckIfECMfilesLoaded(void)
+void ResumeBackgroundMusicIfSuspended(void)
 
 {
   DWORD DVar1;

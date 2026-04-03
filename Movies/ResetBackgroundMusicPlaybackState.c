@@ -1,6 +1,6 @@
 // Address: 0x00494230
 
-void ResetEcmAudioPlaybackState(void)
+void ResetBackgroundMusicPlaybackState(void)
 
 {
   int iVar1;

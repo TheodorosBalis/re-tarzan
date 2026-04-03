@@ -1,6 +1,6 @@
 // Address: 0x00494080
 
-bool IsCurrentEcmTrackPlaying(void)
+bool IsBackgroundMusicPlaying(void)
 
 {
   MCIERROR MVar1;

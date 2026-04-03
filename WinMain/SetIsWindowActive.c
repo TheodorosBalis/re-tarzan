@@ -55,7 +55,7 @@ LAB_004ae233:
     FUN_004a8a90();
   }
   else {
-    CheckIfECMfilesLoaded();
+    ResumeBackgroundMusicIfSuspended();
     CheckIfSoundIsAvailableAndRunOrSomething();
   }
   DAT_00518ddc = g_MainWindowActivationState;
