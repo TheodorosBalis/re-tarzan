@@ -24,7 +24,7 @@ undefined4 ProcessMainMenu(void)
       ShowLoadGameHeaderGraphics();
       DrawMainMenuSelections();
       RequestOptionsGraphicsBlocks();
-      SelectECMfileAndInitAudio(0);
+      SelectBackgroundMusicTrackForLevel(0);
       InitiateFade(1,0x200);
       FUN_004ac410(&DAT_00c46070);
       MenuState = 0;
