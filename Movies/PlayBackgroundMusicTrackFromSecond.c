@@ -1,6 +1,6 @@
 // Address: 0x00494380
 
-void PlayEcmTrackFromSecond(uint param_1,uint param_2)
+void PlayBackgroundMusicTrackFromSecond(uint param_1,uint param_2)
 
 {
   MCIERROR MVar1;
