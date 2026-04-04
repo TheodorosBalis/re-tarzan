@@ -19,7 +19,7 @@ void CMenu__LevelComplete(void)
   CMenu__LevelComplete_SetThreeDigitCounterSprites
             (0x538730,g_LevelCompleteHundredsSfxCounter,0x2000);
   CMenu__LevelComplete_SetThreeDigitCounterSprites
-            (0x538d84,g_TotalCoinsCollected - g_LevelCompleteDisplayedScore,0x2000);
+            (0x538d84,g_TotalTokensCollected - g_LevelCompleteDisplayedScore,0x2000);
   CMenu__LevelComplete_SetSceneEntryTripletBatch(0x538afc,1,0x35c);
   CMenu__LevelComplete_SetSceneEntryTripletBatch(0x538c40,4,0x380);
   _DAT_00538b9e = (undefined2)((FrameCount * 0x19 & 0x7ffU) << 1);
@@ -51,7 +51,7 @@ void CMenu__LevelComplete(void)
       else {
         g_LevelCompleteDisplayedScore = g_LevelCompleteDisplayedScore + 0x32;
       }
-      iVar2 = (g_TotalCoinsCollected / 100) * 100;
+      iVar2 = (g_TotalTokensCollected / 100) * 100;
       if (iVar2 < g_LevelCompleteDisplayedScore) {
         g_LevelCompleteDisplayedScore = iVar2;
       }
@@ -63,7 +63,7 @@ void CMenu__LevelComplete(void)
       if (iVar3 < g_LevelCompleteDisplayedScore / 10) {
         LoadSoundFileAndInitAudio(0xb5,0,0);
       }
-      if (g_LevelCompleteDisplayedScore == (g_TotalCoinsCollected / 100) * 100) {
+      if (g_LevelCompleteDisplayedScore == (g_TotalTokensCollected / 100) * 100) {
         if (g_LevelCompleteInputMode == 0) {
           g_LevelCompleteStateTimer = 0x50;
           _g_LevelCompleteState = 3;
