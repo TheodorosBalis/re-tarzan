@@ -6,7 +6,7 @@ void CMenu__StartGame(void)
   g_LevelTransitionContext._3_1_ =
        (&g_LevelTransitionTypeBySlot)[g_LevelTransitionContext._1_1_ * 2];
   g_LoadTransitionFlags._0_2_ = 0;
-  gCurrentCoinsCollected = 0;
+  gCurrentTokensCollected = 0;
   g_SelectedLevelIndex = 0;
   ResetBackgroundMusicPlaybackState(&DAT_00c46070);
   InitiateFade(2,0x100);

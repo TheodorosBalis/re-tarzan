@@ -6,8 +6,8 @@ void CMenu__LevelComplete_CommitProgressAndAdvanceLevel(void)
   byte bVar1;
   
   g_LevelTransitionContext._3_1_ =
-       g_LevelTransitionContext._3_1_ + (char)(gCurrentCoinsCollected / 100);
-  gCurrentCoinsCollected = gCurrentCoinsCollected + (short)(gCurrentCoinsCollected / 100) * -100;
+       g_LevelTransitionContext._3_1_ + (char)(gCurrentTokensCollected / 100);
+  gCurrentTokensCollected = gCurrentTokensCollected + (short)(gCurrentTokensCollected / 100) * -100;
   if ((g_LevelTransitionRewardMask6 & 0x3f) == 0x3f) {
     *(byte *)((int)&DAT_00534030 + (int)g_LevelTransitionContext._2_1_) =
          *(byte *)((int)&DAT_00534030 + (int)g_LevelTransitionContext._2_1_) |

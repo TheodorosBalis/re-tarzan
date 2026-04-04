@@ -70,7 +70,7 @@ void CMenu__LevelComplete_Enter(void)
   CMenu__LevelComplete_SetSceneEntryTripletBatch(&g_LevelCompleteRewardBurstScenes,4,0x800);
   _g_LevelCompleteState = (uint)(g_LevelCompleteInputMode == 0);
   _g_LevelCompleteStartingLevelIndex = (int)g_LevelTransitionContext._3_1_;
-  g_TotalCoinsCollected = (uint)gCurrentCoinsCollected;
+  g_TotalTokensCollected = (uint)gCurrentTokensCollected;
   g_LevelCompleteStateTimer = 0x20;
   g_LevelCompleteDisplayedScore = 0;
   g_LevelCompleteRewardSlotDoneMask = 0;
