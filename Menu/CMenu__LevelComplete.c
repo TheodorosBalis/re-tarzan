@@ -56,12 +56,12 @@ void CMenu__LevelComplete(void)
         g_LevelCompleteDisplayedScore = iVar2;
       }
       if (iVar4 < g_LevelCompleteDisplayedScore / 100) {
-        LoadSoundFileAndInitAudio(0xbe,0,0);
+        PlayAudioById(0xbe,0,0);
         g_LevelCompleteHundredsSfxCounter = g_LevelCompleteHundredsSfxCounter + 1;
         CMenu__LevelComplete_InitRewardBurstSystem(&g_LevelCompleteRewardBurstSystem,&DAT_00538784);
       }
       if (iVar3 < g_LevelCompleteDisplayedScore / 10) {
-        LoadSoundFileAndInitAudio(0xb5,0,0);
+        PlayAudioById(0xb5,0,0);
       }
       if (g_LevelCompleteDisplayedScore == (g_TotalTokensCollected / 100) * 100) {
         if (g_LevelCompleteInputMode == 0) {
@@ -89,7 +89,7 @@ void CMenu__LevelComplete(void)
          (iVar4 = 6 - g_LevelCompleteStateTimer / 5,
          CMenu__LevelComplete_InitRewardBurstSystem
                    (&g_LevelCompleteRewardBurstSystem,&DAT_005391a4 + iVar4 * 0x144), iVar4 == 0)) {
-        LoadSoundFileAndInitAudio
+        PlayAudioById
                   (*(undefined4 *)
                     (&g_LevelCompleteWorldRewardSfxTable + ((int)DAT_00533fec % 3) * 4),0,0);
       }
@@ -116,7 +116,7 @@ void CMenu__LevelComplete(void)
         else {
           uVar6 = *(undefined4 *)(&g_LevelCompleteSlotRewardSfxTable + iVar4 * 4);
         }
-        LoadSoundFileAndInitAudio(uVar6,0,0);
+        PlayAudioById(uVar6,0,0);
       }
       CMenu__LevelComplete_SetRewardBurstSlotState(iVar4);
       if (g_LevelCompleteFastForwardRequested == 0) {
@@ -132,11 +132,11 @@ void CMenu__LevelComplete(void)
         g_LevelCompleteStateTimer = 0;
       }
       if ((g_LevelTransitionRewardMask4 & 0xf) != 0xf) {
-        LoadSoundFileAndInitAudio(0x3e5,0,0);
+        PlayAudioById(0x3e5,0,0);
         _g_LevelCompleteState = 4;
         return;
       }
-      LoadSoundFileAndInitAudio(0xbf,0,0);
+      PlayAudioById(0xbf,0,0);
       CMenu__LevelComplete_InitRewardBurstSystem(&g_LevelCompleteRewardBurstSystem,&DAT_0053993c);
       _g_LevelCompleteState = 4;
       return;
@@ -148,7 +148,7 @@ void CMenu__LevelComplete(void)
         uVar1 = MenuKeyJustReleased & MenuKeyPressed & 0x4000;
       }
       if (uVar1 != 0) {
-        LoadSoundFileAndInitAudio(0xac,0,0);
+        PlayAudioById(0xac,0,0);
         CMenu__LevelComplete_BeginExitTransition(0);
         _g_LevelCompleteState = 5;
       }

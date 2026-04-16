@@ -24,7 +24,7 @@ LAB_00452e63:
   if ((uVar4 & 0x50) == 0) {
     TimeIDLEinMenu = TimeIDLEinMenu + 1;
     if (((uVar4 & 0x1000) != 0) && (*(int *)(param_1 + 0x14) != 0)) {
-      LoadSoundFileAndInitAudio(0xaa,0,0);
+      PlayAudioById(0xaa,0,0);
       (**(code **)(param_1 + 0x14))(*(undefined4 *)(param_1 + 0x18));
     }
     if ((MenuKeyPressed & MenuKeyJustReleased & 0x4008) != 0) {
@@ -36,11 +36,11 @@ LAB_00452e63:
             (ppuVar2 != &PTR_Options_Sound_004f00d8)) &&
            ((ppuVar2 != &PTR_Options_SFXunused_004f0130 &&
             (ppuVar2 != &PTR_Options_OptionsSelections_004f0188)))) {
-          LoadSoundFileAndInitAudio(0xac,0,0);
+          PlayAudioById(0xac,0,0);
         }
         iVar3 = *(int *)(*(int *)(param_1 + 8) + 0xc + *(int *)(param_1 + 0x24) * 0x18);
         if (iVar3 != -1) {
-          LoadSoundFileAndInitAudio(iVar3,0,0);
+          PlayAudioById(iVar3,0,0);
         }
         (*pcVar1)(*(undefined4 *)(*(int *)(param_1 + 8) + 0x14 + *(int *)(param_1 + 0x24) * 0x18));
       }
@@ -52,11 +52,11 @@ LAB_00452e63:
     }
     if ((((uVar4 & 0x40) != 0) && (*(int *)(param_1 + 0x24) < *(int *)(param_1 + 4) + -1)) &&
        (*(int *)(*(int *)(param_1 + 8) + 0x1c + *(int *)(param_1 + 0x24) * 0x18) != -1)) {
-      LoadSoundFileAndInitAudio(0xaa,0,0);
+      PlayAudioById(0xaa,0,0);
       *(int *)(param_1 + 0x24) = *(int *)(param_1 + 0x24) + 1;
     }
     if (((MenuKeyPressed & MenuKeyJustReleased & 0x10) != 0) && (0 < *(int *)(param_1 + 0x24))) {
-      LoadSoundFileAndInitAudio(0xaa,0,0);
+      PlayAudioById(0xaa,0,0);
       *(int *)(param_1 + 0x24) = *(int *)(param_1 + 0x24) + -1;
       return;
     }

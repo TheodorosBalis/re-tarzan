@@ -1,6 +1,6 @@
 // Address: 0x00453C60
 
-undefined4 * LoadSoundFileAndInitAudio(uint param_1,int *param_2,undefined4 *param_3)
+undefined4 * PlayAudioById(uint param_1,int *param_2,undefined4 *param_3)
 
 {
   undefined4 uVar1;

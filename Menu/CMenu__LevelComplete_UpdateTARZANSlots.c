@@ -23,7 +23,7 @@ void CMenu__LevelComplete_UpdateTARZANSlots(int param_1)
       else {
         uVar5 = 0x3dc;
       }
-      LoadSoundFileAndInitAudio(uVar5,0,0);
+      PlayAudioById(uVar5,0,0);
     }
     *(uint *)(iVar1 + 0x58) = (uint)CONCAT11(100,(char)*(undefined4 *)(iVar1 + 0x58));
   }

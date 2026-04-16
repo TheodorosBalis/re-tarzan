@@ -18,7 +18,7 @@ undefined4 MenuMainEntry(void)
     }
     ptrToDecideWhichMenu = ptrToDecideWhichMenu2;
     if (ptrToDecideWhichMenu2[6] != -1) {
-      LoadSoundFileAndInitAudio(ptrToDecideWhichMenu2[6],0,0);
+      PlayAudioById(ptrToDecideWhichMenu2[6],0,0);
     }
     if ((code *)ptrToDecideWhichMenu[5] != (code *)0x0) {
       (*(code *)ptrToDecideWhichMenu[5])(ptrToDecideWhichMenu);
