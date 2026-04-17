@@ -1,6 +1,6 @@
 // Address: 0x004A9190
 
-void UpdateAudioInGameOrOptions(void)
+void ManageAudioStream(void)
 
 {
   if (g_IsDSoundInitialized != 0) {
@@ -8,7 +8,7 @@ void UpdateAudioInGameOrOptions(void)
       (**(code **)(*g_DSound3DListener + 0x44))(g_DSound3DListener);
     }
     UpdateAudioLinePerSecond();
-    FUN_004a8af0();
+    ManageActiveSoundSlots();
     return;
   }
   return;

@@ -12,7 +12,7 @@ void CGame__Process(void)
   DoNothing1();
   DrawGraphicsTexIfNeeded();
   ProcessPauseOrOptionsMenus();
-  UpdateAudioInGameOrOptions();
+  ManageAudioStream();
   UpdateBackgroundMusic();
   DoNothing2();
   ProcessPendingChunkStream();
