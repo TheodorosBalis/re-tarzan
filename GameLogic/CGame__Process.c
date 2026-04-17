@@ -15,7 +15,7 @@ void CGame__Process(void)
   UpdateAudioInGameOrOptions();
   UpdateBackgroundMusic();
   DoNothing2();
-  CheckIfEfgFileNeedsLoading();
+  ProcessPendingChunkStream();
   iVar1 = IsGamePaused();
   if (iVar1 != 0) {
 LAB_0049b277:
