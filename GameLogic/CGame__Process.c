@@ -15,7 +15,7 @@ void CGame__Process(void)
   ManageAudioStream();
   UpdateBackgroundMusic();
   DoNothing2();
-  ProcessPendingChunkStream();
+  ProcessPendingChunkFileStream();
   iVar1 = IsGamePaused();
   if (iVar1 != 0) {
 LAB_0049b277:

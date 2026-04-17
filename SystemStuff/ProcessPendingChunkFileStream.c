@@ -1,6 +1,6 @@
 // Address: 0x0049AA80
 // unused by the game
-void ProcessPendingChunkStream(void)
+void ProcessPendingChunkFileStream(void)
 
 {
   int iVar1;
