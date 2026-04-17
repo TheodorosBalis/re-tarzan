@@ -1,6 +1,6 @@
 // Address: 0x0049AFE0
 
-void DrawGraphicsTexIfNeeded(void)
+void DrawHardwareInfoOverlayAtStartup(void)
 
 {
   char cVar1;
@@ -12,7 +12,7 @@ void DrawGraphicsTexIfNeeded(void)
   char *pcVar7;
   char *pcVar8;
   
-  iVar2 = ReadFromGlobal722994();
+  iVar2 = GetGraphicsModeRevision();
   if (iVar2 != DAT_00515c50) {
     DAT_00722810 = 0x78;
     DAT_00515c50 = iVar2;

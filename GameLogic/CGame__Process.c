@@ -10,7 +10,7 @@ void CGame__Process(void)
   
   _GameProcessCounter = _GameProcessCounter + 1;
   DoNothing1();
-  DrawGraphicsTexIfNeeded();
+  DrawHardwareInfoOverlayAtStartup();
   ProcessPauseOrOptionsMenus();
   ManageAudioStream();
   UpdateBackgroundMusic();

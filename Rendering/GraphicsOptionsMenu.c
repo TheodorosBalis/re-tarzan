@@ -37,7 +37,7 @@ bool GraphicsOptionsMenu(void)
     if (g_PendingOptionsMenuId != 0) {
       g_GraphicsOptionsMenuState = 0x57;
     }
-    iVar4 = ReadFromGlobal722994();
+    iVar4 = GetGraphicsModeRevision();
     if (DAT_00516b78 != iVar4) {
       DAT_00516b78 = ReadFromGlobal722994();
       g_PendingGraphicsModeSelection = CurrentGraphicsMode();

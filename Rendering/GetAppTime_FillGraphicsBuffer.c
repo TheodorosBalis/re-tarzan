@@ -16,9 +16,9 @@ void GetAppTime_FillGraphicsBuffer(void)
   _g_RenderPacketSortElapsedMs = _g_RenderPacketSortElapsedMs + DVar1;
   DVar1 = timeGetTime();
   _appUpTime = _appUpTime - DVar1;
-  iVar2 = ReadFromGlobal722994();
+  iVar2 = GetGraphicsModeRevision();
   if (iVar2 != g_LastGraphicsPageLayoutRevision) {
-    g_LastGraphicsPageLayoutRevision = ReadFromGlobal722994();
+    g_LastGraphicsPageLayoutRevision = GetGraphicsModeRevision();
     _g_DirtyTexturePageFlags = 0x1010101;
     _DAT_009cef14 = 0x1010101;
     _DAT_009cef18 = 0x1010101;
