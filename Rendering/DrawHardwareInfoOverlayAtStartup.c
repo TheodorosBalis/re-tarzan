@@ -116,7 +116,7 @@ LAB_0049b097:
     pcVar7 = s_NO_SOUND_CARD_FOUND_00515c6c;
   }
   else {
-    iVar2 = FUN_004a79c0();
+    iVar2 = IsEaxSoundAvailable();
     pcVar7 = s_EAX_SOUND_CARD_00515c94;
     if (iVar2 == 0) {
       pcVar7 = s_DIRECTSOUND_CARD_00515c80;

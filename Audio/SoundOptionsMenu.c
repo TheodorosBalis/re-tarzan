@@ -124,7 +124,7 @@ switchD_0049ff68_caseD_3d:
     do {
       switch(*(undefined2 *)(ppuVar5 + 1)) {
       case 0x38:
-        iVar2 = FUN_004a79c0();
+        iVar2 = IsEaxSoundAvailable();
         uVar1 = g_LegacyAudioModeEnabled;
         if (iVar2 == 0) goto LAB_004a0140;
 LAB_004a0135:
