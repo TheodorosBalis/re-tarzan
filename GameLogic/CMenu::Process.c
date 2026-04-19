@@ -1,6 +1,6 @@
 // Address: 0x0047EDA0
 
-undefined4 ProcessMainMenu(void)
+undefined4 CMenu::Process(void)
 
 {
   switch(MenuState) {
