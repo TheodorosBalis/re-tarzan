@@ -9,8 +9,8 @@ void TransitionToWorldOrMenu(int param_1)
     SetControlKeysOnlyMode(1);
     DAT_00c4604c = 0;
     LoadMenuOrAdvanceLevel(0);
-    DAT_00c46050 = ProcessMainMenu;
-    _CWorld__Render = MainMenu__Render;
+    DAT_00c46050 = CMenu::Process;
+    _CWorld__Render = CMenu::Render;
     return;
   }
   SetControlKeysOnlyMode(g_PendingTransitionPayload != 0);
