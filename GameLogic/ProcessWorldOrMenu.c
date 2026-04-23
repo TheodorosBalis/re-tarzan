@@ -7,8 +7,8 @@ void ProcessWorldOrMenu(void)
   ProcessModelLoadQueue();
   UpdateEntity3DSounds();
   GetInputs();
-  if (DAT_00c46050 != (code *)0x0) {
-    (*DAT_00c46050)();
+  if (g_ActiveWorldOrMenuProcessFn != (code *)0x0) {
+    (*g_ActiveWorldOrMenuProcessFn)();
   }
   DoNothing5();
   FreeDeferredModelHeapBlocks(&g_ModelLoadHeapState);
