@@ -1,6 +1,6 @@
 // Address: 0x004AEA70
 
-void ReadUserInIsPauseOptionsMenuRequested(void)
+void IsPauseOptionsMenuRequested(void)
 
 {
   int iVar1;
