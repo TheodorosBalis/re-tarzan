@@ -36,7 +36,7 @@ void WinMessageLoop(void)
     if (g_MainWindowActivationState == 1) {
       g_MainWindowActivationState = 0;
     }
-    ReadUserInput1();
+    ReadUserInpIsPauseOptionsMenuRequested();
     iVar3 = HasPendingGraphicsModeChange();
     if (iVar3 != 0) {
       PauseAudioLinePlayback();
