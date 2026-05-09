@@ -17,15 +17,14 @@ void CPlayerHero__EnterYoungClimbableEdgeHang(void)
     g_PlayerActionState = 0x22;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x22 -> CPlayerHero::EnterYoungClimbableEdgePullUp */
-  CPlayerHero__EnterYoungClimbableEdgePullUp();
+    CPlayerHero__EnterYoungClimbableEdgePullUp();
     return;
   }
   if (*(char *)(g_PlayerSceneEntry + 0x75) == '\0') {
-    CPlayerHero__PlayAnimation(0x6f);
+    CPlayerHero_PlayAnimation(0x6f);
     return;
   }
-  CPlayerHero__PlayAnimation(0x6b);
+  CPlayerHero_PlayAnimation(0x6b);
   return;
 }
-
 

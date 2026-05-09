@@ -7,10 +7,9 @@ Address: 0x004905B0
 void CPlayerHero__UpdateYoungApplyDamageInWater(void)
 
 {
-  CPlayerHero__AdvanceAnimationScript();
-  CPlayerHero__SpawnYoungWaterAttachmentEffects();
-  CPlayerHero__UpdateMovementAndCollision(1);
+  CPlayerHero_AdvanceAnimationScript();
+  CPlayerHero_SpawnYoungWaterAttachmentEffects();
+  CPlayerHero_UpdateMovementAndCollision(1);
   return;
 }
-
 

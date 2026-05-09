@@ -7,7 +7,7 @@ Address: 0x00490560
 void CPlayerHero__EnterYoungApplyDamageInWater(void)
 
 {
-  CPlayerHero__PlayAnimation(0x7c);
+  CPlayerHero_PlayAnimation(0x7c);
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
   g_PlayerTargetMoveSpeed = 0;
   *(undefined4 *)(g_PlayerMotionState + 0x14) = 0;
@@ -17,5 +17,4 @@ void CPlayerHero__EnterYoungApplyDamageInWater(void)
   g_PlayerDamageFlashTicks = 0x3c;
   return;
 }
-
 

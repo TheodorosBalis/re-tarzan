@@ -7,7 +7,7 @@ Address: 0x004906C0
 void CPlayerHero__EnterYoungTarzanAndTerkTutorialPickupSequence(void)
 
 {
-  CPlayerHero__PlayAnimation(0x9d);
+  CPlayerHero_PlayAnimation(0x9d);
   *(int *)(g_PlayerSceneEntryData + 2) = DAT_0051c6cc + 0xe38;
   *g_PlayerSceneEntryData = 0x2a;
   *(undefined4 *)(g_PlayerSceneEntry + 0x70) = 0;
@@ -18,7 +18,8 @@ void CPlayerHero__EnterYoungTarzanAndTerkTutorialPickupSequence(void)
   *(undefined2 *)(g_PlayerSceneEntry + 0x140) = 0;
   *(undefined2 *)(g_PlayerGroundShadowProbeSceneEntry + 0x140) = 0;
   g_PlayerCurrentCollisionMode =
-       FUN_00434380(g_PlayerSceneEntry,(&PTR_DAT_00515264)[DAT_0053a2dc * 0xc]);
+       CPlayerHero__ApplyPlacementDescriptorToSceneEntry
+                 (g_PlayerSceneEntry,(&PTR_DAT_00515264)[DAT_0053a2dc * 0xc]);
   DAT_0053a2e8 = 3;
   g_PlayerActionState = 0x38;
   return;

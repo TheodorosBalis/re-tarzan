@@ -21,10 +21,10 @@ void CPlayerHero__UpdateYoungTarzanAndTerkTutorialPickupSequence(void)
     g_PlayerActionState = 0x3e;
     g_PreviousPlayerActionState = uVar2;
     /* table enter state 0x3E -> CPlayerHero::EnterYoungTutorialPickupReturnIdle */
-  CPlayerHero__EnterYoungTutorialPickupReturnIdle();
+    CPlayerHero__EnterYoungTutorialPickupReturnIdle();
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
-    CPlayerHero__UpdateMovementAndCollision(1);
+    CPlayerHero_UpdateMovementAndCollision(1);
     return;
   }
   switch(g_PlayerActionState) {
@@ -35,18 +35,18 @@ void CPlayerHero__UpdateYoungTarzanAndTerkTutorialPickupSequence(void)
          *(byte *)(g_PlayerGroundShadowProbeSceneEntry + 0xf) | 0x80;
     if (DAT_0053a2a8 != 0) {
       g_PlayerActionState = 0x39;
-      CPlayerHero__PlayAnimation(0xa1);
+      CPlayerHero_PlayAnimation(0xa1);
       return;
     }
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0x20;
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 0x20;
-    CPlayerHero__UpdateMovementAndCollision(1);
+    CPlayerHero_UpdateMovementAndCollision(1);
     uVar2 = g_PlayerActionState;
     if (g_PlayerCollisionFacingFlags != '\x01') goto LAB_00490d30;
     g_PlayerActionState = 0x3a;
     g_PreviousPlayerActionState = uVar2;
     /* table enter state 0x3A -> CPlayerHero::EnterYoungTutorialPickupFinalPose */
-  CPlayerHero__EnterYoungTutorialPickupFinalPose();
+    CPlayerHero__EnterYoungTutorialPickupFinalPose();
 LAB_00490865:
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
@@ -60,7 +60,7 @@ LAB_00490865:
       *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0x20;
       *(undefined4 *)(g_PlayerMotionState + 0x10) = 0x20;
     }
-    CPlayerHero__UpdateMovementAndCollision(1);
+    CPlayerHero_UpdateMovementAndCollision(1);
     if (g_PlayerCollisionFacingFlags == '\x01') {
       DAT_0053a2e8 = 4;
       iVar5 = *(int *)(DAT_0053a2b4 + 0x38);
@@ -133,7 +133,7 @@ LAB_00490865:
   case 0x3a:
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
-    CPlayerHero__UpdateMovementAndCollision(1);
+    CPlayerHero_UpdateMovementAndCollision(1);
     if (DAT_0053a2a8 != 0) {
       DAT_0053a2d0 = DAT_0053a2e4;
       InitAudioLine_stub();
@@ -143,8 +143,9 @@ LAB_00490865:
     if (DAT_0053a2e4 < DAT_0053a2d0) {
       g_PlayerActionState = 0x39;
       g_PlayerCurrentCollisionMode =
-           FUN_00434380(g_PlayerSceneEntry,(&PTR_DAT_00515268)[DAT_0053a2dc * 0xc]);
-      CPlayerHero__PlayAnimation(*(undefined4 *)(&DAT_0051526c + DAT_0053a2dc * 0x30));
+           CPlayerHero__ApplyPlacementDescriptorToSceneEntry
+                     (g_PlayerSceneEntry,(&PTR_DAT_00515268)[DAT_0053a2dc * 0xc]);
+      CPlayerHero_PlayAnimation(*(undefined4 *)(&DAT_0051526c + DAT_0053a2dc * 0x30));
       iVar5 = DAT_0053a2dc;
       iVar4 = DAT_0053a2dc * 0x30;
       uVar1 = *(ushort *)(&DAT_00515250 + iVar4);
@@ -170,18 +171,18 @@ LAB_00490865:
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
+  CPlayerHero_UpdateMovementAndCollision(1);
 LAB_00490d30:
-  cVar3 = CPlayerHero__TrySnapToNearbyGround();
+  cVar3 = CPlayerHero_TrySnapToNearbyGround();
   uVar2 = g_PlayerActionState;
   if (cVar3 == '\0') {
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = uVar2;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
     return;
   }
-  iVar5 = CPlayerHero__AdvanceAnimationScript();
+  iVar5 = CPlayerHero_AdvanceAnimationScript();
   if (iVar5 == 6) {
     *(byte *)(g_PlayerSceneEntry + 0x75) = ~*(byte *)(g_PlayerSceneEntry + 0x75);
     *(ushort *)(g_PlayerSceneEntry + 0xa2) = *(ushort *)(g_PlayerSceneEntry + 0xa2) ^ 0x800;
@@ -189,7 +190,7 @@ LAB_00490d30:
     g_PlayerMoveHeadingAngle = *(undefined2 *)(g_PlayerSceneEntry + 0xa2);
   }
   else if (iVar5 == 8) {
-    CPlayerHero__PlayAnimation(0x94);
+    CPlayerHero_PlayAnimation(0x94);
     return;
   }
   return;

@@ -26,16 +26,15 @@ void CPlayerHero__EnterYoungGrabSwing(void)
     }
     uVar2 = 0x3c;
   }
-  CPlayerHero__PlayAnimation(uVar2);
+  CPlayerHero_PlayAnimation(uVar2);
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
   g_PlayerTargetMoveSpeed = 0;
   *(undefined4 *)(g_PlayerMotionState + 0x14) = 0;
   *(undefined4 *)(g_PlayerMotionState + 0x20) = 0;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 0;
   DAT_0051ce80 = 0;
-  CPlayerHero__AdvanceAnimationScript();
-  CPlayerHero__UpdateMovementAndCollision(0);
+  CPlayerHero_AdvanceAnimationScript();
+  CPlayerHero_UpdateMovementAndCollision(0);
   return;
 }
-
 

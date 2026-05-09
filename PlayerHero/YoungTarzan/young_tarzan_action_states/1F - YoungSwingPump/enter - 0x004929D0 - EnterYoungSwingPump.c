@@ -68,4 +68,3 @@ void CPlayerHero__EnterYoungSwingPump(void)
   return;
 }
 
-

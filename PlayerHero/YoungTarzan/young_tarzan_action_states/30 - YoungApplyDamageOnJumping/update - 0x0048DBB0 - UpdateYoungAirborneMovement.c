@@ -24,14 +24,14 @@ void CPlayerHero__UpdateYoungTarzanAirborneMovement(void)
     *(undefined4 *)(g_PlayerMotionState + 0x14) = 0x10;
     g_PlayerTargetMoveSpeed = 0;
   }
-  CPlayerHero__UpdateRunInputAndMovement();
-  CPlayerHero__TrySnapDownToGround();
+  CPlayerHero_UpdateRunInputAndMovement();
+  CPlayerHero_TrySnapDownToGround();
   if (DAT_0051cd1c != '\0') {
     if (((ram0x0051cdca & 0x2000) == 0) && (g_PlayerActionState != 0x30)) {
       g_PreviousPlayerActionState = g_PlayerActionState;
       g_PlayerActionState = 0x30;
       /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+      CPlayerHero__EnterYoungApplyDamageOnJumping();
     }
     if (g_PlayerDamageInvulnerabilityTicks == 0) {
       g_PlayerDamageInvulnerabilityTicks = 0x3c;
@@ -40,7 +40,8 @@ void CPlayerHero__UpdateYoungTarzanAirborneMovement(void)
   }
   if (((_g_PlayerSequenceFlags & 0xf000) == 0) &&
      (((g_PlayerInputHeldMask & 0x400000) != 0 || ((g_PlayerInputHeldMask & 0x3800000) != 0)))) {
-    if ((DAT_0051ce04 == '\0') && (*(char *)(g_PlayerMotionState + 0xd) != '\0')) goto LAB_0048dd3c;
+    if ((g_PlayerJumpArcActive == '\0') && (*(char *)(g_PlayerMotionState + 0xd) != '\0'))
+    goto LAB_0048dd3c;
     if ((DAT_0051cdf0 != 0x8d) && (DAT_0051cdf0 != 0x91)) {
       if (((g_PlayerInputHeldMask & 0x400000) == 0) && ((g_PlayerInputHeldMask & 0x800000) == 0)) {
         if ((DAT_0051cd16 & 0x10) == 0) goto LAB_0048dcd5;
@@ -49,19 +50,19 @@ void CPlayerHero__UpdateYoungTarzanAirborneMovement(void)
       else {
         uVar3 = 0x8d;
       }
-      CPlayerHero__PlayAnimation(uVar3);
+      CPlayerHero_PlayAnimation(uVar3);
     }
   }
 LAB_0048dcd5:
-  if (DAT_0051ce04 != '\0') {
-    iVar2 = FUN_00434680(0xa0);
+  if (g_PlayerJumpArcActive != '\0') {
+    iVar2 = CPlayerHero_TryClampJumpArcToSurfaceCeiling(0xa0);
     if (iVar2 != 0) {
       *(int *)(g_PlayerSceneEntryData + 0xc) = iVar2;
       g_PreviousPlayerActionState = g_PlayerActionState;
       g_PlayerActionState = 7;
       /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
-      DAT_0051ce04 = '\0';
+      CPlayerHero__EnterYoungTarzanFalling();
+      g_PlayerJumpArcActive = '\0';
     }
     if ((g_PlayerActionState == 0x30) || (g_PlayerActionState == 0x31)) {
       uVar3 = 0;
@@ -69,12 +70,12 @@ LAB_0048dcd5:
     else {
       uVar3 = 1;
     }
-    CPlayerHero__UpdateJumpArcVerticalMotion(uVar3);
+    CPlayerHero_UpdateJumpArcVerticalMotion(uVar3);
   }
 LAB_0048dd3c:
-  iVar2 = CPlayerHero__AdvanceAnimationScript();
+  iVar2 = CPlayerHero_AdvanceAnimationScript();
   if (iVar2 == 4) {
-    FUN_0043fc90(0,0,0,0xf,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition(0,0,0,0xf,0x11);
   }
   else if (iVar2 == 8) {
     if (DAT_005314ac != 0) {
@@ -85,5 +86,4 @@ LAB_0048dd3c:
   }
   return;
 }
-
 

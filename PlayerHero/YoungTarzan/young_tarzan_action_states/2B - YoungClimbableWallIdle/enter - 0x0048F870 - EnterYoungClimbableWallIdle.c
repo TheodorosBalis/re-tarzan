@@ -15,7 +15,7 @@ void CPlayerHero__EnterYoungClimbableWallIdle(void)
   else {
     uVar1 = 0x7e;
   }
-  CPlayerHero__PlayAnimation(uVar1);
+  CPlayerHero_PlayAnimation(uVar1);
   if (g_PreviousPlayerActionState == 0x2d) {
     *(int *)(g_PlayerSceneEntryData + 0xc) = *(int *)(g_PlayerSceneEntryData + 0xc) + -0x70;
   }
@@ -28,5 +28,4 @@ void CPlayerHero__EnterYoungClimbableWallIdle(void)
   g_PlayerTiltControlEnabled = 0;
   return;
 }
-
 

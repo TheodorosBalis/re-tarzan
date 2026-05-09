@@ -21,7 +21,7 @@ LAB_0048e949:
         g_PlayerActionState = 0x29;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x29 -> CPlayerHero::EnterYoungApplyDamageInWater */
-  CPlayerHero__EnterYoungApplyDamageInWater();
+        CPlayerHero__EnterYoungApplyDamageInWater();
         DetachEntitySoundHandle(&DAT_0051ce90);
         return;
       }
@@ -30,14 +30,14 @@ LAB_0048e91e:
         g_PlayerActionState = 0x13;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+        CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
         DetachEntitySoundHandle(&DAT_0051ce90);
         return;
       }
       g_PlayerActionState = 0x30;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+      CPlayerHero__EnterYoungApplyDamageOnJumping();
       if (g_PlayerDamageInvulnerabilityTicks == 0) {
         g_PlayerDamageInvulnerabilityTicks = 0x3c;
         g_PlayerDamageFlashTicks = 0x3c;
@@ -52,7 +52,7 @@ LAB_0048e91e:
           g_PlayerActionState = 0xc;
           g_PreviousPlayerActionState = uVar1;
           /* table enter state 0x0C -> CPlayerHero::EnterYoungPlayerDamage */
-  CPlayerHero__EnterYoungPlayerDamage();
+          CPlayerHero__EnterYoungPlayerDamage();
           DetachEntitySoundHandle(&DAT_0051ce90);
           return;
         }
@@ -61,20 +61,20 @@ LAB_0048e91e:
       goto LAB_0048e949;
     }
     g_PlayerCollisionFacingFlags = '\x01';
-    CPlayerHero__ApplyDamageContactPushback();
+    CPlayerHero_ApplyDamageContactPushback();
   }
   uVar1 = g_PlayerActionState;
   if ((_g_PlayerSequenceFlags & 0xf000) == 0) {
     if (g_PlayerCurrentCollisionMode != 0) {
       if (g_PlayerCurrentCollisionMode < 3) {
-        cVar2 = CPlayerHero__IsFacingCurrentCollisionSurface();
+        cVar2 = CPlayerHero_IsFacingCurrentCollisionSurface();
         uVar1 = g_PlayerActionState;
         if (((cVar2 == '\0') && ((g_CameraFollowFlags & g_PlayerInputHeldMask) != 0)) &&
            (g_PlayerCollisionFacingFlags == '\0')) {
           g_PlayerActionState = 1;
           g_PreviousPlayerActionState = uVar1;
           /* table enter state 0x01 -> CPlayerHero::EnterYoungTarzanMoveForward */
-  CPlayerHero__EnterYoungTarzanMoveForward();
+          CPlayerHero__EnterYoungTarzanMoveForward();
           DetachEntitySoundHandle(&DAT_0051ce90);
           return;
         }
@@ -83,7 +83,7 @@ LAB_0048e91e:
         g_PlayerActionState = 0xe;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x0E -> CPlayerHero::EnterYoungTouchSurfaceOnSurfing */
-  CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
+        CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
         DetachEntitySoundHandle(&DAT_0051ce90);
         return;
       }
@@ -95,14 +95,14 @@ LAB_0048e91e:
       g_PlayerActionState = 5;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x05 -> CPlayerHero::EnterYoungTarzanMovingJump */
-  CPlayerHero__EnterYoungTarzanMovingJump();
+      CPlayerHero__EnterYoungTarzanMovingJump();
       DetachEntitySoundHandle(&DAT_0051ce90);
       return;
     }
     g_PlayerActionState = 6;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x06 -> CPlayerHero::EnterYoungTarzanStandingJump */
-  CPlayerHero__EnterYoungTarzanStandingJump();
+    CPlayerHero__EnterYoungTarzanStandingJump();
     DetachEntitySoundHandle(&DAT_0051ce90);
     return;
   }
@@ -110,18 +110,18 @@ LAB_0048e91e:
     g_PlayerActionState = 10;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x0A -> CPlayerHero::EnterYoungBlock */
-  CPlayerHero__EnterYoungBlock();
+    CPlayerHero__EnterYoungBlock();
     DetachEntitySoundHandle(&DAT_0051ce90);
     return;
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   uVar1 = g_PlayerActionState;
   if (cVar2 != '\0') {
-    iVar3 = CPlayerHero__AdvanceAnimationScript();
+    iVar3 = CPlayerHero_AdvanceAnimationScript();
     if ((iVar3 == 8) && ((g_PlayerInputHeldMask & 0x100000) == 0)) {
       DetachEntitySoundHandle(&DAT_0051ce90);
-      CPlayerHero__PlayAnimation(0x1f);
+      CPlayerHero_PlayAnimation(0x1f);
     }
     return;
   }
@@ -133,5 +133,4 @@ LAB_0048eb17:
   DetachEntitySoundHandle(&DAT_0051ce90);
   return;
 }
-
 

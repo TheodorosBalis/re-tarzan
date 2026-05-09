@@ -10,12 +10,12 @@ void CPlayerHero__EnterYoungSwimForward(void)
   int iVar1;
   
   if (g_PreviousPlayerActionState == 0x25) {
-    CPlayerHero__PlayAnimation(0x7b);
+    CPlayerHero_PlayAnimation(0x7b);
   }
   else {
-    CPlayerHero__PlayAnimation(0x7a);
+    CPlayerHero_PlayAnimation(0x7a);
     *(undefined4 *)(g_PlayerMotionState + 0x10) = 4;
-    iVar1 = CPlayerHero__SteerYoungAirMoveHeadingTowardInput();
+    iVar1 = CPlayerHero_SteerYoungAirMoveHeadingTowardInput();
     if (0x400 < iVar1) {
       *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
     }
@@ -27,5 +27,4 @@ void CPlayerHero__EnterYoungSwimForward(void)
   g_PlayerTiltControlEnabled = 1;
   return;
 }
-
 

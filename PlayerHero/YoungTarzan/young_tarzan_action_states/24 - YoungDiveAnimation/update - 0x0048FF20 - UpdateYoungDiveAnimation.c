@@ -13,8 +13,8 @@ void CPlayerHero__UpdateYoungDiveAnimation(void)
   char cVar2;
   int iVar3;
   
-  CPlayerHero__UpdateJumpArcVerticalMotion(0);
-  CPlayerHero__UpdateMovementAndCollision(1);
+  CPlayerHero_UpdateJumpArcVerticalMotion(0);
+  CPlayerHero_UpdateMovementAndCollision(1);
   iVar3 = ((*(int *)(g_PlayerMotionState + 0x10) * 0x4b) / 0x30) * -0x1000 + 0x14f;
   g_PlayerAirMovePitchAngle =
        (short)((ulonglong)((longlong)iVar3 * 0xb60b60b7) >> 0x28) -
@@ -26,20 +26,19 @@ void CPlayerHero__UpdateYoungDiveAnimation(void)
   UnloadEncodedResourceId(8);
   UnloadEncodedResourceId(0x18);
   UnloadEncodedResourceId(0x1e);
-  cVar2 = CPlayerHero__IsOnTreeSurfingSurface();
+  cVar2 = CPlayerHero_IsOnTreeSurfingSurface();
   uVar1 = g_PlayerActionState;
   if ((cVar2 != '\0') && (0 < *(int *)(g_PlayerSceneEntryData + 0xc))) {
     g_PlayerActionState = 0x25;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x25 -> CPlayerHero::EnterYoungInWater */
-  CPlayerHero__EnterYoungInWater();
+    CPlayerHero__EnterYoungInWater();
     return;
   }
-  iVar3 = CPlayerHero__AdvanceAnimationScript();
+  iVar3 = CPlayerHero_AdvanceAnimationScript();
   if (iVar3 == 8) {
     PlayAudioById(400,g_PlayerSceneEntry + 0x104,g_PlayerSceneEntry + 0x14);
   }
   return;
 }
-
 

@@ -26,30 +26,37 @@ void CPlayerHero__UpdateYoungDiveInWater(void)
   }
   uStack_4 = 1;
   uStack_8 = 0x490188;
-  CPlayerHero__UpdateMovementAndCollision();
+  CPlayerHero_UpdateMovementAndCollision();
   uStack_4 = 0x490190;
-  CPlayerHero__AdvanceAnimationScript();
+  CPlayerHero_AdvanceAnimationScript();
   iVar1 = GetSceneAttachmentWorldPositionByMask(g_PlayerSceneEntry,0x100,&uStack_c);
   if (iVar1 != 0) {
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
   }
   iVar1 = GetSceneAttachmentWorldPositionByMask(g_PlayerSceneEntry,0x200,&uStack_c);
   if (iVar1 != 0) {
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
   }
   iVar1 = GetSceneAttachmentWorldPositionByMask(g_PlayerSceneEntry,0x400,&uStack_c);
   if (iVar1 != 0) {
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
   }
   iVar1 = GetSceneAttachmentWorldPositionByMask(g_PlayerSceneEntry,0x800,&uStack_c);
   if (iVar1 != 0) {
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
-    FUN_0043fc90(uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7d,0x11);
+    InstantiateRuntimeEntryByTypeAtPosition
+              (uStack_c,*(undefined4 *)(g_PlayerSceneEntryData + 0xc),uStack_4,0x7e,0x11);
   }
   return;
 }
-
 

@@ -19,7 +19,7 @@ void CPlayerHero__EnterYoungSwingMoveToNextSegment(void)
       g_PlayerActionState = 0x18;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x18 -> CPlayerHero::EnterYoungSwinging */
-  CPlayerHero__EnterYoungSwinging();
+      CPlayerHero__EnterYoungSwinging();
       return;
     }
     *(undefined2 *)(iVar2 + 0xe) = 4;
@@ -28,7 +28,7 @@ void CPlayerHero__EnterYoungSwingMoveToNextSegment(void)
       g_PlayerActionState = 0x18;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x18 -> CPlayerHero::EnterYoungSwinging */
-  CPlayerHero__EnterYoungSwinging();
+      CPlayerHero__EnterYoungSwinging();
       return;
     }
   }
@@ -39,11 +39,10 @@ void CPlayerHero__EnterYoungSwingMoveToNextSegment(void)
     }
   }
   if (DAT_0051ce40 == '\0') {
-    CPlayerHero__PlayAnimation(0x47);
+    CPlayerHero_PlayAnimation(0x47);
     return;
   }
-  CPlayerHero__PlayAnimation(0x46);
+  CPlayerHero_PlayAnimation(0x46);
   return;
 }
-
 

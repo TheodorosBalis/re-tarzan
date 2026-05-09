@@ -11,7 +11,7 @@ void CPlayerHero__EnterYoungTouchSurfaceOnSurfing(void)
 {
   undefined4 uVar1;
   
-  if (DAT_0051ce84 == 1) {
+  if (g_PlayerTreeSurfingLateralThresholdSide == 1) {
     switch(DAT_0051cdf0) {
     case 0x2e:
       goto switchD_00491533_caseD_2e;
@@ -29,7 +29,7 @@ switchD_00491533_caseD_3a:
       goto LAB_00491592;
     }
   }
-  if (DAT_0051ce84 != 2) {
+  if (g_PlayerTreeSurfingLateralThresholdSide != 2) {
     switch(DAT_0051cdf0) {
     case 0x2e:
 switchD_00491533_caseD_2e:
@@ -55,7 +55,7 @@ switchD_00491533_caseD_37:
       goto switchD_00491533_caseD_3a;
     }
 LAB_00491592:
-    CPlayerHero__PlayAnimation(uVar1);
+    CPlayerHero_PlayAnimation(uVar1);
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = DAT_0051ce00;
     *(undefined4 *)(g_PlayerMotionState + 0x14) = 0x80;
     *(undefined4 *)(g_PlayerMotionState + 0x18) = 8;
@@ -83,5 +83,4 @@ LAB_00491592:
     goto LAB_00491592;
   }
 }
-
 

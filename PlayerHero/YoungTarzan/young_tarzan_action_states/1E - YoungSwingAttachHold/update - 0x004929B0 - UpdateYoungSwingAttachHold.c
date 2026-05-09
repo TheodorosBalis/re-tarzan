@@ -13,4 +13,3 @@ void CPlayerHero__UpdateYoungSwingAttachHold(void)
   return;
 }
 
-

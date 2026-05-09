@@ -10,4 +10,3 @@ void CPlayerHero__EnterYoungTarzanAirborneMovement(void)
   return;
 }
 
-

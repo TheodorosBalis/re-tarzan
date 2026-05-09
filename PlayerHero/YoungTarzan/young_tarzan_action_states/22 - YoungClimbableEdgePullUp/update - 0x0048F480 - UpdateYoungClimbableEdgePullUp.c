@@ -14,29 +14,29 @@ void CPlayerHero__UpdateYoungClimbableEdgePullUp(void)
   int iVar3;
   undefined4 uVar4;
   
-  CPlayerHero__UpdateMovementAndCollision(1);
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   uVar1 = g_PlayerActionState;
   if (cVar2 == '\0') {
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
   }
-  iVar3 = CPlayerHero__AdvanceAnimationScript();
+  iVar3 = CPlayerHero_AdvanceAnimationScript();
   uVar1 = g_PlayerActionState;
   if (iVar3 == 7) {
     if ((_g_PlayerSequenceFlags & 0xf000) == 0) {
       if (g_PlayerCurrentCollisionMode != 0) {
         if (g_PlayerCurrentCollisionMode < 3) {
-          cVar2 = CPlayerHero__IsFacingCurrentCollisionSurface();
+          cVar2 = CPlayerHero_IsFacingCurrentCollisionSurface();
           uVar1 = g_PlayerActionState;
           if (((cVar2 == '\0') && ((g_CameraFollowFlags & g_PlayerInputHeldMask) != 0)) &&
              (g_PlayerCollisionFacingFlags == '\0')) {
             g_PlayerActionState = 1;
             g_PreviousPlayerActionState = uVar1;
             /* table enter state 0x01 -> CPlayerHero::EnterYoungTarzanMoveForward */
-  CPlayerHero__EnterYoungTarzanMoveForward();
+            CPlayerHero__EnterYoungTarzanMoveForward();
             return;
           }
         }
@@ -44,7 +44,7 @@ void CPlayerHero__UpdateYoungClimbableEdgePullUp(void)
           g_PlayerActionState = 0xe;
           g_PreviousPlayerActionState = uVar1;
           /* table enter state 0x0E -> CPlayerHero::EnterYoungTouchSurfaceOnSurfing */
-  CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
+          CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
           return;
         }
       }
@@ -52,9 +52,10 @@ void CPlayerHero__UpdateYoungClimbableEdgePullUp(void)
   }
   else if (iVar3 == 8) {
     iVar3 = *(int *)(g_PlayerSceneEntry + 0x110) * 4 + 4;
-    uVar4 = FUN_00449120(g_PlayerSceneEntry + 0x14,
-                         *(int *)(iVar3 + g_CollisionSurfaceTable) + iVar3 + g_CollisionSurfaceTable
-                        );
+    uVar4 = ProjectWorldPositionToJungleSurfaceCoord
+                      (g_PlayerSceneEntry + 0x14,
+                       *(int *)(iVar3 + g_JungleSurfaceTableBase) + iVar3 + g_JungleSurfaceTableBase
+                      );
     *(undefined4 *)(g_PlayerSceneEntry + 0x10c) = uVar4;
     MoveSceneEntryWithCollision(0,0,g_PlayerSceneEntry);
     *(int *)(g_PlayerSceneEntryData + 8) =
@@ -66,5 +67,4 @@ void CPlayerHero__UpdateYoungClimbableEdgePullUp(void)
   }
   return;
 }
-
 

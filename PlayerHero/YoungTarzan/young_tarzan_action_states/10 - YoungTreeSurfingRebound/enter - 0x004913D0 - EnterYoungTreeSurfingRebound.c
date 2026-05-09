@@ -23,7 +23,7 @@ void CPlayerHero__EnterYoungTreeSurfingRebound(void)
   else {
     uVar1 = 0x24;
   }
-  CPlayerHero__PlayAnimation(uVar1);
+  CPlayerHero_PlayAnimation(uVar1);
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0xff;
   *(undefined4 *)(g_PlayerMotionState + 0x20) = 0x80;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 0xe;
@@ -34,5 +34,4 @@ void CPlayerHero__EnterYoungTreeSurfingRebound(void)
   g_PlayerTargetMoveSpeed = *(undefined4 *)(g_PlayerMotionState + 0x10);
   return;
 }
-
 

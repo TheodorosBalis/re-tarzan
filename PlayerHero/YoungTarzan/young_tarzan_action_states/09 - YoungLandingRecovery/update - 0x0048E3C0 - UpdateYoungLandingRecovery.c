@@ -23,7 +23,7 @@ void CPlayerHero__UpdateYoungLandingRecovery(void)
         g_PreviousPlayerActionState = g_PlayerActionState;
         g_PlayerActionState = 0x30;
         /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+        CPlayerHero__EnterYoungApplyDamageOnJumping();
       }
       if (g_PlayerDamageInvulnerabilityTicks == 0) {
         g_PlayerDamageInvulnerabilityTicks = 0x3c;
@@ -36,27 +36,27 @@ void CPlayerHero__UpdateYoungLandingRecovery(void)
         g_PlayerActionState = 5;
         g_PreviousPlayerActionState = sVar1;
         /* table enter state 0x05 -> CPlayerHero::EnterYoungTarzanMovingJump */
-  CPlayerHero__EnterYoungTarzanMovingJump();
+        CPlayerHero__EnterYoungTarzanMovingJump();
         return;
       }
       g_PlayerActionState = 6;
       g_PreviousPlayerActionState = sVar1;
       /* table enter state 0x06 -> CPlayerHero::EnterYoungTarzanStandingJump */
-  CPlayerHero__EnterYoungTarzanStandingJump();
+      CPlayerHero__EnterYoungTarzanStandingJump();
       return;
     }
     if (DAT_0051cdf0 != 0x18) {
       if ((_g_PlayerSequenceFlags & 0xf000) == 0) {
         if (g_PlayerCurrentCollisionMode != 0) {
           if (g_PlayerCurrentCollisionMode < 3) {
-            cVar2 = CPlayerHero__IsFacingCurrentCollisionSurface();
+            cVar2 = CPlayerHero_IsFacingCurrentCollisionSurface();
             sVar1 = g_PlayerActionState;
             if (((cVar2 == '\0') && ((g_CameraFollowFlags & g_PlayerInputHeldMask) != 0)) &&
                (g_PlayerCollisionFacingFlags == '\0')) {
               g_PlayerActionState = 1;
               g_PreviousPlayerActionState = sVar1;
               /* table enter state 0x01 -> CPlayerHero::EnterYoungTarzanMoveForward */
-  CPlayerHero__EnterYoungTarzanMoveForward();
+              CPlayerHero__EnterYoungTarzanMoveForward();
               return;
             }
           }
@@ -64,7 +64,7 @@ void CPlayerHero__UpdateYoungLandingRecovery(void)
             g_PlayerActionState = 0xe;
             g_PreviousPlayerActionState = sVar1;
             /* table enter state 0x0E -> CPlayerHero::EnterYoungTouchSurfaceOnSurfing */
-  CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
+            CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
             return;
           }
         }
@@ -76,7 +76,7 @@ void CPlayerHero__UpdateYoungLandingRecovery(void)
           g_PlayerActionState = 3;
           g_PreviousPlayerActionState = sVar1;
           /* table enter state 0x03 -> CPlayerHero::EnterYoungTarzanTurnAround */
-  CPlayerHero__EnterYoungTarzanTurnAround();
+          CPlayerHero__EnterYoungTarzanTurnAround();
           return;
         }
         if ((g_PlayerInputHeldMask & 0x80) == 0) {
@@ -88,17 +88,16 @@ void CPlayerHero__UpdateYoungLandingRecovery(void)
       }
     }
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   sVar1 = g_PlayerActionState;
   if (cVar2 == '\0') {
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = sVar1;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
   }
-  CPlayerHero__AdvanceAnimationScript();
+  CPlayerHero_AdvanceAnimationScript();
   return;
 }
-
 

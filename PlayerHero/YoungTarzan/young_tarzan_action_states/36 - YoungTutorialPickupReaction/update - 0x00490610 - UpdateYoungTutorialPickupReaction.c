@@ -11,26 +11,26 @@ void CPlayerHero__UpdateYoungTutorialPickupReaction(void)
   char cVar2;
   int iVar3;
   
-  CPlayerHero__UpdateMovementAndCollision(1);
+  CPlayerHero_UpdateMovementAndCollision(1);
   uVar1 = g_PlayerActionState;
   g_PlayerDamageInvulnerabilityTicks = 0x3c;
   if (DAT_0053a2e8 == 2) {
     g_PlayerActionState = 0x37;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x37 -> CPlayerHero::EnterYoungTarzanAndTerkTutorialPickupSequence */
-  CPlayerHero__EnterYoungTarzanAndTerkTutorialPickupSequence();
+    CPlayerHero__EnterYoungTarzanAndTerkTutorialPickupSequence();
     return;
   }
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   uVar1 = g_PlayerActionState;
   if (cVar2 == '\0') {
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
     return;
   }
-  iVar3 = CPlayerHero__AdvanceAnimationScript();
+  iVar3 = CPlayerHero_AdvanceAnimationScript();
   if (iVar3 == 5) {
     DAT_0053a2e8 = 1;
   }
@@ -41,11 +41,10 @@ void CPlayerHero__UpdateYoungTutorialPickupReaction(void)
       return;
     }
     if (iVar3 == 8) {
-      CPlayerHero__PlayAnimation(0x94);
+      CPlayerHero_PlayAnimation(0x94);
       return;
     }
   }
   return;
 }
-
 

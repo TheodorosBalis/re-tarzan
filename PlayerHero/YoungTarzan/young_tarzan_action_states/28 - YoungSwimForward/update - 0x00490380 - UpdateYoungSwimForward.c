@@ -19,14 +19,14 @@ void CPlayerHero__UpdateYoungSwimForward(void)
         g_PlayerActionState = 0x29;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x29 -> CPlayerHero::EnterYoungApplyDamageInWater */
-  CPlayerHero__EnterYoungApplyDamageInWater();
+        CPlayerHero__EnterYoungApplyDamageInWater();
         return;
       }
       if (g_PlayerCurrentCollisionMode != 5) {
         g_PlayerActionState = 0x30;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+        CPlayerHero__EnterYoungApplyDamageOnJumping();
         if (g_PlayerDamageInvulnerabilityTicks != 0) {
           return;
         }
@@ -37,7 +37,7 @@ void CPlayerHero__UpdateYoungSwimForward(void)
       g_PlayerActionState = 0x13;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+      CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
       return;
     }
     if (g_PlayerDamageInvulnerabilityTicks == 0) {
@@ -45,27 +45,27 @@ void CPlayerHero__UpdateYoungSwimForward(void)
         g_PlayerActionState = 0x29;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x29 -> CPlayerHero::EnterYoungApplyDamageInWater */
-  CPlayerHero__EnterYoungApplyDamageInWater();
+        CPlayerHero__EnterYoungApplyDamageInWater();
         return;
       }
       if (g_PlayerCurrentCollisionMode == 5) {
         g_PlayerActionState = 0x13;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+        CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
         return;
       }
       g_PlayerActionState = 0xc;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x0C -> CPlayerHero::EnterYoungPlayerDamage */
-  CPlayerHero__EnterYoungPlayerDamage();
+      CPlayerHero__EnterYoungPlayerDamage();
       return;
     }
     g_PlayerCollisionFacingFlags = '\x01';
-    CPlayerHero__ApplyDamageContactPushback();
+    CPlayerHero_ApplyDamageContactPushback();
   }
-  CPlayerHero__AdvanceAnimationScript();
-  CPlayerHero__SpawnYoungWaterAttachmentEffects();
+  CPlayerHero_AdvanceAnimationScript();
+  CPlayerHero_SpawnYoungWaterAttachmentEffects();
   if (g_PlayerAirMovePitchAngle != 0) {
     iVar2 = GetWrappedSignedAngleDelta12Bit(g_PlayerAirMovePitchAngle,0);
     if ((iVar2 >> 3 ^ iVar2 >> 0x1f) - (iVar2 >> 0x1f) < 2) {
@@ -82,12 +82,12 @@ void CPlayerHero__UpdateYoungSwimForward(void)
     g_PlayerActionState = 0x27;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x27 -> CPlayerHero::EnterYoungWaterTurn */
-  CPlayerHero__EnterYoungWaterTurn();
+    CPlayerHero__EnterYoungWaterTurn();
   }
   else {
-    CPlayerHero__SteerYoungAirMoveHeadingTowardInput();
+    CPlayerHero_SteerYoungAirMoveHeadingTowardInput();
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
+  CPlayerHero_UpdateMovementAndCollision(1);
   uVar1 = g_PlayerActionState;
   if (g_PlayerCollisionFacingFlags == '\0') {
     return;
@@ -98,5 +98,4 @@ void CPlayerHero__UpdateYoungSwimForward(void)
   CPlayerHero__EnterYoungWaterTurn();
   return;
 }
-
 

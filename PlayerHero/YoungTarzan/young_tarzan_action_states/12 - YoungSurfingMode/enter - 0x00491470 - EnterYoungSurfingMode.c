@@ -11,7 +11,7 @@ void CPlayerHero__EnterYoungSurfingMode(void)
 {
   *(undefined1 *)(g_PlayerSceneEntry + 0x75) = 0;
   PlayAudioById(0x28,g_PlayerSceneEntry + 0x104,g_PlayerSceneEntry + 0x14);
-  CPlayerHero__PlayAnimation(0x29);
+  CPlayerHero_PlayAnimation(0x29);
   PlayAudioById(0x29,&DAT_0051ce90,g_PlayerSceneEntry + 0x14);
   *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0xa0;
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0xa0;
@@ -22,5 +22,4 @@ void CPlayerHero__EnterYoungSurfingMode(void)
   _DAT_0053a2c0 = 0xffffffff;
   return;
 }
-
 

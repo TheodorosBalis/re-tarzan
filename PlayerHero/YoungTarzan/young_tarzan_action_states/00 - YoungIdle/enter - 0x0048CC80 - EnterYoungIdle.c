@@ -16,7 +16,7 @@ void CPlayerHero__EnterYoungTarzanIdle(void)
   g_PlayerInteractionLockFlags = 0;
   DAT_0053a2e8 = 0;
   if (g_PlayerCurrentCollisionMode != 4) {
-    CPlayerHero__PlayAnimation(8);
+    CPlayerHero_PlayAnimation(8);
     sVar2 = RandomModulo(10);
     g_PlayerIdleFidgetDelayTicks = sVar2 + 5;
     g_PlayerTiltControlEnabled = 0;
@@ -28,5 +28,4 @@ void CPlayerHero__EnterYoungTarzanIdle(void)
   CPlayerHero__EnterYoungWaterIdle();
   return;
 }
-
 

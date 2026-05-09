@@ -7,7 +7,7 @@ Address: 0x0048DA10
 void CPlayerHero__EnterYoungTarzanMovingJump(void)
 
 {
-  CPlayerHero__PlayAnimation(0xc);
+  CPlayerHero_PlayAnimation(0xc);
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0xff;
   *(undefined4 *)(g_PlayerMotionState + 0x20) = 0x4e;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 6;
@@ -18,5 +18,4 @@ void CPlayerHero__EnterYoungTarzanMovingJump(void)
   g_PlayerTargetMoveSpeed = 0x2e;
   return;
 }
-
 

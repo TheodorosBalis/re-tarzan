@@ -23,14 +23,14 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
         g_PlayerActionState = 0x29;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x29 -> CPlayerHero::EnterYoungApplyDamageInWater */
-  CPlayerHero__EnterYoungApplyDamageInWater();
+        CPlayerHero__EnterYoungApplyDamageInWater();
         return;
       }
       if (g_PlayerCurrentCollisionMode != 5) {
         g_PlayerActionState = 0x30;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+        CPlayerHero__EnterYoungApplyDamageOnJumping();
         if (g_PlayerDamageInvulnerabilityTicks != 0) {
           return;
         }
@@ -41,7 +41,7 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 0x13;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+      CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
       return;
     }
     if (g_PlayerDamageInvulnerabilityTicks == 0) {
@@ -49,24 +49,24 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
         g_PlayerActionState = 0x29;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x29 -> CPlayerHero::EnterYoungApplyDamageInWater */
-  CPlayerHero__EnterYoungApplyDamageInWater();
+        CPlayerHero__EnterYoungApplyDamageInWater();
         return;
       }
       if (g_PlayerCurrentCollisionMode == 5) {
         g_PlayerActionState = 0x13;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+        CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
         return;
       }
       g_PlayerActionState = 0xc;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x0C -> CPlayerHero::EnterYoungPlayerDamage */
-  CPlayerHero__EnterYoungPlayerDamage();
+      CPlayerHero__EnterYoungPlayerDamage();
       return;
     }
     g_PlayerCollisionFacingFlags = '\x01';
-    CPlayerHero__ApplyDamageContactPushback();
+    CPlayerHero_ApplyDamageContactPushback();
   }
   uVar1 = g_PlayerActionState;
   if (((g_PlayerSequenceFlags & 0xf000) == 0) && ((g_PlayerInputPressedMask & 0x200000) != 0)) {
@@ -74,25 +74,25 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 6;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x06 -> CPlayerHero::EnterYoungTarzanStandingJump */
-  CPlayerHero__EnterYoungTarzanStandingJump();
+      CPlayerHero__EnterYoungTarzanStandingJump();
       return;
     }
     g_PlayerActionState = 5;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x05 -> CPlayerHero::EnterYoungTarzanMovingJump */
-  CPlayerHero__EnterYoungTarzanMovingJump();
+    CPlayerHero__EnterYoungTarzanMovingJump();
     return;
   }
   if (((g_PlayerSequenceFlags & 0xf000) == 0) && (g_PlayerCurrentCollisionMode != 0)) {
     if (g_PlayerCurrentCollisionMode < 3) {
-      cVar2 = CPlayerHero__IsFacingCurrentCollisionSurface();
+      cVar2 = CPlayerHero_IsFacingCurrentCollisionSurface();
       uVar1 = g_PlayerActionState;
       if (((cVar2 == '\0') && ((g_PlayerInputHeldMask & g_CameraFollowFlags) != 0)) &&
          (g_PlayerCollisionFacingFlags == '\0')) {
         g_PlayerActionState = 1;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x01 -> CPlayerHero::EnterYoungTarzanMoveForward */
-  CPlayerHero__EnterYoungTarzanMoveForward();
+        CPlayerHero__EnterYoungTarzanMoveForward();
         return;
       }
     }
@@ -100,7 +100,7 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 0xe;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x0E -> CPlayerHero::EnterYoungTouchSurfaceOnSurfing */
-  CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
+      CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
       return;
     }
   }
@@ -111,7 +111,7 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 3;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x03 -> CPlayerHero::EnterYoungTarzanTurnAround */
-  CPlayerHero__EnterYoungTarzanTurnAround();
+      CPlayerHero__EnterYoungTarzanTurnAround();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x80) == 0) {
@@ -126,14 +126,14 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 0x2f;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x2F -> CPlayerHero::EnterYoungPound */
-  CPlayerHero__EnterYoungPound();
+      CPlayerHero__EnterYoungPound();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x80000) != 0) {
       g_PlayerActionState = 10;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x0A -> CPlayerHero::EnterYoungBlock */
-  CPlayerHero__EnterYoungBlock();
+      CPlayerHero__EnterYoungBlock();
       return;
     }
   }
@@ -142,7 +142,7 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
     g_PlayerActionState = 0x34;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x34 -> CPlayerHero::EnterYoungStabAnimation */
-  CPlayerHero__EnterYoungStabAnimation();
+    CPlayerHero__EnterYoungStabAnimation();
     return;
   }
   if (uVar5 == 0) {
@@ -150,33 +150,33 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
       g_PlayerActionState = 0x35;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x35 -> CPlayerHero::EnterYoungAlternativeStabAnimation */
-  CPlayerHero__EnterYoungAlternativeStabAnimation();
+      CPlayerHero__EnterYoungAlternativeStabAnimation();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x400000) != 0) {
       g_PlayerActionState = 0x32;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x32 -> CPlayerHero::EnterYoungThrowHigh */
-  CPlayerHero__EnterYoungThrowHigh();
+      CPlayerHero__EnterYoungThrowHigh();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x800000) != 0) {
       g_PlayerActionState = 0x33;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x33 -> CPlayerHero::EnterYoungThrowLow */
-  CPlayerHero__EnterYoungThrowLow();
+      CPlayerHero__EnterYoungThrowLow();
       return;
     }
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   uVar1 = g_PlayerActionState;
   if (cVar2 != '\0') {
-    iVar4 = CPlayerHero__AdvanceAnimationScript();
+    iVar4 = CPlayerHero_AdvanceAnimationScript();
     if ((iVar4 != 0) &&
        (sVar3 = g_PlayerIdleFidgetDelayTicks + -1, bVar6 = g_PlayerIdleFidgetDelayTicks < 0,
        g_PlayerIdleFidgetDelayTicks = sVar3, bVar6)) {
-      CPlayerHero__PlayAnimation(4);
+      CPlayerHero_PlayAnimation(4);
     }
     return;
   }
@@ -186,5 +186,4 @@ void CPlayerHero__UpdateYoungTarzanIdle(void)
   CPlayerHero__EnterYoungTarzanFalling();
   return;
 }
-
 

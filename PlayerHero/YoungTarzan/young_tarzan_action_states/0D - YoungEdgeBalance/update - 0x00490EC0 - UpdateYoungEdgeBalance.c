@@ -19,7 +19,7 @@ void CPlayerHero__UpdateYoungEdgeBalance(void)
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
     return;
   }
   if ((g_PlayerPowerFruitActionInputMask & g_PlayerInputHeldMask) == 0) {
@@ -28,7 +28,7 @@ void CPlayerHero__UpdateYoungEdgeBalance(void)
       g_PreviousPlayerActionState = uVar1;
       DAT_0051ce60 = DAT_0051ce60 + 1;
       /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+      CPlayerHero__EnterYoungTarzanFalling();
       return;
     }
     DAT_0051ce60 = -8;
@@ -50,8 +50,7 @@ void CPlayerHero__UpdateYoungEdgeBalance(void)
   if (*(char *)(g_PlayerSceneEntry + 0x75) != '\0') {
     uVar2 = ~uVar2 + 1;
   }
-  FUN_004345f0(uVar2,uVar4);
+  CPlayerHero_ApplyEdgeBalanceMovementDeltas(uVar2,uVar4);
   return;
 }
-
 

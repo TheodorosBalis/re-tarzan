@@ -38,4 +38,3 @@ void CPlayerHero__EnterYoungSwingAttachHold(void)
   return;
 }
 
-

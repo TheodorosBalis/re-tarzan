@@ -10,16 +10,15 @@ void CPlayerHero__EnterYoungClimbableEdgePullUp(void)
   switch(DAT_0051cdf0) {
   case 0x6b:
   case 0x6c:
-    CPlayerHero__PlayAnimation(0x6d);
+    CPlayerHero_PlayAnimation(0x6d);
     return;
   default:
-    CPlayerHero__PlayAnimation(0x73);
+    CPlayerHero_PlayAnimation(0x73);
     return;
   case 0x6f:
   case 0x70:
-    CPlayerHero__PlayAnimation(0x71);
+    CPlayerHero_PlayAnimation(0x71);
     return;
   }
 }
-
 

@@ -8,11 +8,10 @@ void CPlayerHero__EnterYoungSwingToClimbableSurface(void)
 
 {
   if (DAT_0051ce40 == '\0') {
-    CPlayerHero__PlayAnimation(0x53);
+    CPlayerHero_PlayAnimation(0x53);
     return;
   }
-  CPlayerHero__PlayAnimation(0x57);
+  CPlayerHero_PlayAnimation(0x57);
   return;
 }
-
 

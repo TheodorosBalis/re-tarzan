@@ -30,7 +30,7 @@ void CPlayerHero__UpdateYoungSwingPump(void)
       g_PlayerActionState = 0x18;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x18 -> CPlayerHero::EnterYoungSwinging */
-  CPlayerHero__EnterYoungSwinging();
+      CPlayerHero__EnterYoungSwinging();
     }
   }
   if ((g_PlayerInputPressedMask & 0x200000) != 0) {
@@ -38,10 +38,9 @@ void CPlayerHero__UpdateYoungSwingPump(void)
     g_PreviousPlayerActionState = g_PlayerActionState;
     g_PlayerActionState = 0x1c;
     /* table enter state 0x1C -> CPlayerHero::EnterYoungSwingRelease */
-  CPlayerHero__EnterYoungSwingRelease();
+    CPlayerHero__EnterYoungSwingRelease();
     return;
   }
   return;
 }
-
 

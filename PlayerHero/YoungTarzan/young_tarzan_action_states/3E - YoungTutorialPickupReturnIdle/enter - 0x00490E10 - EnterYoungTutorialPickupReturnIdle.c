@@ -7,8 +7,7 @@ Address: 0x00490E10
 void CPlayerHero__EnterYoungTutorialPickupReturnIdle(void)
 
 {
-  CPlayerHero__PlayAnimation(0x94);
+  CPlayerHero_PlayAnimation(0x94);
   return;
 }
-
 

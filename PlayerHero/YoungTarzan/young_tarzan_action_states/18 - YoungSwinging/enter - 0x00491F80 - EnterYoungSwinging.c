@@ -11,11 +11,11 @@ void CPlayerHero__EnterYoungSwinging(void)
   
   if (g_CurrentSwingRuntimeEntry == 0) {
     if (DAT_0051ce40 == '\0') {
-      CPlayerHero__PlayAnimation(0x52);
+      CPlayerHero_PlayAnimation(0x52);
       DAT_0051ce80 = 0;
       return;
     }
-    CPlayerHero__PlayAnimation(0x51);
+    CPlayerHero_PlayAnimation(0x51);
     DAT_0051ce80 = 0;
     return;
   }
@@ -25,22 +25,21 @@ void CPlayerHero__EnterYoungSwinging(void)
   }
   if (g_PreviousPlayerActionState == 0x1f) {
     if (DAT_0051ce40 == '\0') {
-      CPlayerHero__PlayAnimation(99);
+      CPlayerHero_PlayAnimation(99);
       DAT_0051ce80 = 0;
       return;
     }
-    CPlayerHero__PlayAnimation(0x62);
+    CPlayerHero_PlayAnimation(0x62);
     DAT_0051ce80 = 0;
     return;
   }
   if (DAT_0051ce40 == '\0') {
-    CPlayerHero__PlayAnimation(0x3e);
+    CPlayerHero_PlayAnimation(0x3e);
     DAT_0051ce80 = 0;
     return;
   }
-  CPlayerHero__PlayAnimation(0x3d);
+  CPlayerHero_PlayAnimation(0x3d);
   DAT_0051ce80 = 0;
   return;
 }
-
 

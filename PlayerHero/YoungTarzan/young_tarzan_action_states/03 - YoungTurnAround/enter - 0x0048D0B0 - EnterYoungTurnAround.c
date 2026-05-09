@@ -15,10 +15,9 @@ void CPlayerHero__EnterYoungTarzanTurnAround(void)
   else {
     uVar1 = 10;
   }
-  CPlayerHero__PlayAnimation(uVar1);
+  CPlayerHero_PlayAnimation(uVar1);
   *(byte *)(g_PlayerSceneEntry + 0x75) = ~*(byte *)(g_PlayerSceneEntry + 0x75);
   *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
   return;
 }
-
 

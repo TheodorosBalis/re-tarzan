@@ -13,9 +13,10 @@ void CPlayerHero__EnterYoungFatalDamageSequence(void)
   int iVar4;
   
   DAT_0051ce00 = 0x40;
-  iVar4 = FUN_0043fc90(*(undefined4 *)(g_PlayerSceneEntryData + 4),
-                       *(undefined4 *)(g_PlayerSceneEntryData + 6),
-                       *(undefined4 *)(g_PlayerSceneEntryData + 8),0x2e,0x11);
+  iVar4 = InstantiateRuntimeEntryByTypeAtPosition
+                    (*(undefined4 *)(g_PlayerSceneEntryData + 4),
+                     *(undefined4 *)(g_PlayerSceneEntryData + 6),
+                     *(undefined4 *)(g_PlayerSceneEntryData + 8),0x2e,0x11);
   iVar1 = *(int *)(iVar4 + 0x38);
   if (iVar1 != 0) {
     *(undefined4 *)(iVar1 + 0x14) = *(undefined4 *)(g_PlayerSceneEntryData + 4);
@@ -54,11 +55,10 @@ void CPlayerHero__EnterYoungFatalDamageSequence(void)
     *(undefined4 *)(iVar1 + 0x5c) = *(undefined4 *)(iVar3 + 0x5c);
     g_ActiveCameraAnchorEntry = iVar4;
   }
-  FUN_00435f50(0,0,0,0,0,0x1e);
-  CPlayerHero__PlayAnimation(0x22);
+  CPlayerHero_BeginScriptedMotionSequence(0,0,0,0,0,0x1e);
+  CPlayerHero_PlayAnimation(0x22);
   QueuePlayerDamageEvent(0,0x200);
   g_PlayerSequenceDelayTicks = 0x1e;
   return;
 }
-
 

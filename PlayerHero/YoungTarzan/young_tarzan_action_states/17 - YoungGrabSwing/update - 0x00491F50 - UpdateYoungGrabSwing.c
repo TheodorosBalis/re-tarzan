@@ -21,7 +21,7 @@ uint CPlayerHero__UpdateYoungGrabSwing(void)
   if (g_CurrentSwingRuntimeEntry != 0) {
     UpdatePlayerOnSwing(g_CurrentSwingRuntimeEntry);
   }
-  CPlayerHero__UpdateMovementAndCollision(0);
+  CPlayerHero_UpdateMovementAndCollision(0);
   uVar9 = 0;
   *(short *)(g_PlayerAnimationState + 0x14) = *(short *)(g_PlayerAnimationState + 0x14) + -1;
   if (*(short *)(g_PlayerAnimationState + 0x14) < 0) {
@@ -59,7 +59,7 @@ uint CPlayerHero__UpdateYoungGrabSwing(void)
                       *(short *)(g_PlayerAnimationState + 0x16) * 4));
           return uVar9;
         case 0x8005:
-          uVar9 = CPlayerHero__PlayHeroModeAnimation
+          uVar9 = CPlayerHero_PlayHeroModeAnimation
                             (*(undefined2 *)
                               (*(int *)(g_PlayerAnimationState + 0xc) + 2 +
                               *(short *)(g_PlayerAnimationState + 0x16) * 4));
@@ -74,7 +74,7 @@ uint CPlayerHero__UpdateYoungGrabSwing(void)
           }
           break;
         case 0x8007:
-          DAT_0051ce04 = 1;
+          g_PlayerJumpArcActive = 1;
           if (*(int *)(g_PlayerSceneEntry + 0x60) != 0) {
             *(undefined4 *)(*(int *)(g_PlayerSceneEntry + 0x60) + 0x60) = 0;
           }
@@ -146,7 +146,7 @@ LAB_0043370d:
           *(undefined2 *)(g_PlayerAnimationState + 0x1e) = 0;
           break;
         case 0x8015:
-          CPlayerHero__MoveToAnimationAttachmentWithCollision();
+          CPlayerHero_MoveToAnimationAttachmentWithCollision();
           if (uVar9 == 0) {
             uVar9 = 0xe;
           }
@@ -195,18 +195,19 @@ LAB_0043370d:
           *(uint *)(g_PlayerSceneEntry + 0x70) = (uint)*(ushort *)(iVar4 + 2 + iVar5 * 4);
           break;
         case 0x801f:
-          CPlayerHero__RefreshPowerFruitDrawWindow();
+          CPlayerHero_RefreshPowerFruitDrawWindow();
           break;
         case 0x8020:
-          CPlayerHero__ClearPowerFruitDrawWindow();
+          CPlayerHero_ClearPowerFruitDrawWindow();
           break;
         case 0x8021:
           iVar6 = (uint)*(ushort *)(iVar4 + 2 + iVar5 * 4) * 4;
-          FUN_004abce0(0,*(undefined2 *)(&DAT_004ec5cc + iVar6),
-                       CONCAT31((int3)((uint)iVar4 >> 8),(&DAT_004ec5ce)[iVar6]));
+          PlayForceFeedbackEffect_Stub
+                    (0,*(undefined2 *)(&DAT_004ec5cc + iVar6),
+                     CONCAT31((int3)((uint)iVar4 >> 8),(&DAT_004ec5ce)[iVar6]));
           break;
         case 0x8022:
-          CPlayerHero__UpdateAnimationEffectSceneEntry
+          CPlayerHero_UpdateAnimationEffectSceneEntry
                     (CONCAT22(*(short *)(g_PlayerAnimationState + 0x16) >> 0xf,
                               *(undefined2 *)(iVar4 + 2 + iVar5 * 4)));
           break;
@@ -262,5 +263,4 @@ LAB_00433a9e:
   }
   return uVar9;
 }
-
 

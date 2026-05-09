@@ -19,7 +19,7 @@ void CPlayerHero__UpdateYoungSwinging(void)
         g_PlayerActionState = 7;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+        CPlayerHero__EnterYoungTarzanFalling();
         return;
       }
       if (((g_PlayerInputHeldMask & g_CameraFollowFlags) != 0) &&
@@ -27,7 +27,7 @@ void CPlayerHero__UpdateYoungSwinging(void)
         g_PlayerActionState = 0x1d;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x1D -> CPlayerHero::EnterYoungSwingToClimbableSurface */
-  CPlayerHero__EnterYoungSwingToClimbableSurface();
+        CPlayerHero__EnterYoungSwingToClimbableSurface();
         return;
       }
     }
@@ -38,7 +38,7 @@ void CPlayerHero__UpdateYoungSwinging(void)
         g_PlayerActionState = 0x19;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x19 -> CPlayerHero::EnterYoungSwingMoveToPreviousSegment */
-  CPlayerHero__EnterYoungSwingMoveToPreviousSegment();
+        CPlayerHero__EnterYoungSwingMoveToPreviousSegment();
 LAB_004920ea:
         *(undefined2 *)(g_PlayerSceneEntry + 0x78) = 0;
         *(undefined2 *)(g_PlayerAnimationState + 0x1e) = 0;
@@ -48,14 +48,14 @@ LAB_004920ea:
         g_PlayerActionState = 0x1b;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x1B -> CPlayerHero::EnterYoungSwingMoveToNextSegment */
-  CPlayerHero__EnterYoungSwingMoveToNextSegment();
+        CPlayerHero__EnterYoungSwingMoveToNextSegment();
         goto LAB_004920ea;
       }
       if ((g_PlayerInputPressedMask & 0x200000) != 0) {
         g_PlayerActionState = 0x1c;
         g_PreviousPlayerActionState = uVar1;
         /* table enter state 0x1C -> CPlayerHero::EnterYoungSwingRelease */
-  CPlayerHero__EnterYoungSwingRelease();
+        CPlayerHero__EnterYoungSwingRelease();
         goto LAB_004920ea;
       }
     }
@@ -64,7 +64,7 @@ LAB_004920ea:
       g_PlayerActionState = 0x1f;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x1F -> CPlayerHero::EnterYoungSwingPump */
-  CPlayerHero__EnterYoungSwingPump();
+      CPlayerHero__EnterYoungSwingPump();
       *(undefined2 *)(g_PlayerSceneEntry + 0x78) = 0;
       *(undefined2 *)(g_PlayerAnimationState + 0x1e) = 0;
       return;
@@ -74,16 +74,15 @@ LAB_004920ea:
   if ((g_CameraRelativeTurnInputMask & g_PlayerInputPressedMask) != 0) {
     *(byte *)(g_PlayerSceneEntry + 0x75) = ~*(byte *)(g_PlayerSceneEntry + 0x75);
   }
-  iVar2 = CPlayerHero__AdvanceAnimationScript();
+  iVar2 = CPlayerHero_AdvanceAnimationScript();
   if ((0x3c < iVar2) && (iVar2 < 0x3f)) {
     if (*(byte *)(g_PlayerSceneEntry + 0x75) != g_PlayerFacingBeforeSwing) {
       *(byte *)(g_PlayerSceneEntry + 0x75) = ~*(byte *)(g_PlayerSceneEntry + 0x75);
       *(ushort *)(g_PlayerSceneEntry + 0xa2) = *(ushort *)(g_PlayerSceneEntry + 0xa2) ^ 0x800;
     }
-    CPlayerHero__PlayAnimation(iVar2);
+    CPlayerHero_PlayAnimation(iVar2);
   }
-  CPlayerHero__UpdateMovementAndCollision(0);
+  CPlayerHero_UpdateMovementAndCollision(0);
   return;
 }
-
 

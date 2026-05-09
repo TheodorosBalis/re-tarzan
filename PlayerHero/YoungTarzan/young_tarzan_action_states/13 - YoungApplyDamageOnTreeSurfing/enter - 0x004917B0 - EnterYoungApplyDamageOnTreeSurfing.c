@@ -7,10 +7,9 @@ Address: 0x004917B0
 void CPlayerHero__EnterYoungApplyDamageOnTreeSurfing(void)
 
 {
-  CPlayerHero__PlayAnimation(0x2b);
+  CPlayerHero_PlayAnimation(0x2b);
   DetachEntitySoundHandle(&DAT_0051ce90);
-  FUN_004abce0(0,2,0x10);
+  PlayForceFeedbackEffect_Stub(0,2,0x10);
   return;
 }
-
 

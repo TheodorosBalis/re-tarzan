@@ -20,13 +20,13 @@ void CPlayerHero__UpdateYoungSwingMoveToPreviousSegment(void)
     g_PlayerActionState = 0x1c;
     g_PreviousPlayerActionState = uVar2;
     /* table enter state 0x1C -> CPlayerHero::EnterYoungSwingRelease */
-  CPlayerHero__EnterYoungSwingRelease();
+    CPlayerHero__EnterYoungSwingRelease();
     return;
   }
   if ((g_CurrentSwingRuntimeEntry != 0) &&
      (iVar1 = *(int *)(g_CurrentSwingRuntimeEntry + 0x38), iVar1 != 0)) {
-    CPlayerHero__UpdateMovementAndCollision(1);
-    iVar3 = CPlayerHero__AdvanceAnimationScript();
+    CPlayerHero_UpdateMovementAndCollision(1);
+    iVar3 = CPlayerHero_AdvanceAnimationScript();
     if (iVar3 == 8) {
       DAT_0051ce80 = DAT_0051ce80 + 1;
       g_CurrentSwingSegmentIndex = g_CurrentSwingSegmentIndex + -1;
@@ -38,7 +38,7 @@ void CPlayerHero__UpdateYoungSwingMoveToPreviousSegment(void)
         else {
           uVar4 = 0x44;
         }
-        CPlayerHero__PlayAnimation(uVar4);
+        CPlayerHero_PlayAnimation(uVar4);
       }
       if ((g_PlayerInputHeldMask & 0x10) == 0) {
         if (DAT_0051ce40 == '\0') {
@@ -47,7 +47,7 @@ void CPlayerHero__UpdateYoungSwingMoveToPreviousSegment(void)
         else {
           uVar4 = 0x44;
         }
-        CPlayerHero__PlayAnimation(uVar4);
+        CPlayerHero_PlayAnimation(uVar4);
       }
     }
     UpdatePlayerOnSwing(g_CurrentSwingRuntimeEntry);
@@ -63,10 +63,9 @@ void CPlayerHero__UpdateYoungSwingMoveToPreviousSegment(void)
       g_PlayerActionState = 7;
       g_PreviousPlayerActionState = uVar2;
       /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+      CPlayerHero__EnterYoungTarzanFalling();
     }
   }
   return;
 }
-
 

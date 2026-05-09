@@ -23,12 +23,12 @@ void CPlayerHero__EnterYoungTarzanStandingJump(void)
       g_PlayerActionState = 5;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x05 -> CPlayerHero::EnterYoungTarzanMovingJump */
-  CPlayerHero__EnterYoungTarzanMovingJump();
+      CPlayerHero__EnterYoungTarzanMovingJump();
       return;
     }
     uVar2 = 0xe;
   }
-  CPlayerHero__PlayAnimation(uVar2);
+  CPlayerHero_PlayAnimation(uVar2);
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0xff;
   *(undefined4 *)(g_PlayerMotionState + 0x20) = 0x4e;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 6;
@@ -39,5 +39,4 @@ void CPlayerHero__EnterYoungTarzanStandingJump(void)
   g_PlayerTargetMoveSpeed = 0x20;
   return;
 }
-
 

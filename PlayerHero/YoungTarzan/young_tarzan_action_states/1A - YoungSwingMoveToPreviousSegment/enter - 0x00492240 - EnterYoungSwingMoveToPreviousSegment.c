@@ -22,7 +22,7 @@ void CPlayerHero__EnterYoungSwingMoveToPreviousSegment(void)
       g_PlayerActionState = 0x18;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x18 -> CPlayerHero::EnterYoungSwinging */
-  CPlayerHero__EnterYoungSwinging();
+      CPlayerHero__EnterYoungSwinging();
       return;
     }
   }
@@ -33,11 +33,10 @@ void CPlayerHero__EnterYoungSwingMoveToPreviousSegment(void)
     }
   }
   if (DAT_0051ce40 == '\0') {
-    CPlayerHero__PlayAnimation(0x41);
+    CPlayerHero_PlayAnimation(0x41);
     return;
   }
-  CPlayerHero__PlayAnimation(0x40);
+  CPlayerHero_PlayAnimation(0x40);
   return;
 }
-
 

@@ -7,7 +7,7 @@ Address: 0x0048DB30
 void CPlayerHero__EnterYoungApplyDamageOnJumping(void)
 
 {
-  CPlayerHero__PlayAnimation(0x10);
+  CPlayerHero_PlayAnimation(0x10);
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0xff;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 6;
   *(undefined4 *)(g_PlayerMotionState + 0x28) = 7;
@@ -19,5 +19,4 @@ void CPlayerHero__EnterYoungApplyDamageOnJumping(void)
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
   return;
 }
-
 

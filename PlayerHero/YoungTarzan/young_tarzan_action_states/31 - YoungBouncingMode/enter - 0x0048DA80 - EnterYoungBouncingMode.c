@@ -10,7 +10,7 @@ void CPlayerHero__EnterYoungBouncingMode(void)
   if ((g_CameraRelativeTurnInputMask & g_PlayerInputPressedMask) != 0) {
     g_InputPreviousMask = g_InputPreviousMask & ~(uint)g_CameraRelativeTurnInputMask;
   }
-  CPlayerHero__PlayAnimation(0xf);
+  CPlayerHero_PlayAnimation(0xf);
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0xff;
   *(undefined4 *)(g_PlayerMotionState + 0x24) = 6;
   *(undefined4 *)(g_PlayerMotionState + 0x28) = 7;
@@ -26,5 +26,4 @@ void CPlayerHero__EnterYoungBouncingMode(void)
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
   return;
 }
-
 

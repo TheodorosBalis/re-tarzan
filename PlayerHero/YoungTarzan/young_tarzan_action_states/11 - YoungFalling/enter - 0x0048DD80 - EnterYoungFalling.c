@@ -16,11 +16,11 @@ void CPlayerHero__EnterYoungTarzanFalling(void)
     *(undefined4 *)(*(int *)(g_PlayerSceneEntry + 0x60) + 0x60) = 0;
   }
   *(undefined4 *)(iVar1 + 0x60) = 0;
-  cVar3 = CPlayerHero__IsOnTreeSurfingSurface();
+  cVar3 = CPlayerHero_IsOnTreeSurfingSurface();
   uVar2 = g_PlayerActionState;
   if (cVar3 == '\0') {
     if (g_PreviousPlayerActionState == 0x23) {
-      CPlayerHero__PlayAnimation(0x11);
+      CPlayerHero_PlayAnimation(0x11);
       return;
     }
     *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0x30;
@@ -43,7 +43,7 @@ void CPlayerHero__EnterYoungTarzanFalling(void)
         break;
       case 0xe:
       case 0x10:
-        CPlayerHero__PlayAnimation(0x28);
+        CPlayerHero_PlayAnimation(0x28);
         g_CurrentSwingRuntimeEntry = 0;
         g_PlayerActionState = 0x11;
         return;
@@ -51,16 +51,16 @@ void CPlayerHero__EnterYoungTarzanFalling(void)
       case 0x1d:
         if (g_CurrentSwingRuntimeEntry == 0) {
           if (DAT_0051ce40 == '\0') {
-            CPlayerHero__PlayAnimation(0x5b);
+            CPlayerHero_PlayAnimation(0x5b);
             g_CurrentSwingRuntimeEntry = 0;
             return;
           }
-          CPlayerHero__PlayAnimation(0x5c);
+          CPlayerHero_PlayAnimation(0x5c);
           g_CurrentSwingRuntimeEntry = 0;
           return;
         }
       default:
-        CPlayerHero__PlayAnimation(0x11);
+        CPlayerHero_PlayAnimation(0x11);
       }
     }
     g_CurrentSwingRuntimeEntry = 0;
@@ -72,5 +72,4 @@ void CPlayerHero__EnterYoungTarzanFalling(void)
   CPlayerHero__EnterYoungDiveAnimation();
   return;
 }
-
 

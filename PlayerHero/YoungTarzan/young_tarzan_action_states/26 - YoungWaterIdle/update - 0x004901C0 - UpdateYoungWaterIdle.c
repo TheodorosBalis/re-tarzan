@@ -17,14 +17,13 @@ void CPlayerHero__UpdateYoungWaterIdle(void)
     g_PlayerActionState = 0x28;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x28 -> CPlayerHero::EnterYoungSwimForward */
-  CPlayerHero__EnterYoungSwimForward();
+    CPlayerHero__EnterYoungSwimForward();
     return;
   }
-  CPlayerHero__SteerYoungAirMoveHeadingFromHorizontalInput();
-  CPlayerHero__UpdateMovementAndCollision(1);
-  CPlayerHero__AdvanceAnimationScript();
-  CPlayerHero__SpawnYoungWaterAttachmentEffects();
+  CPlayerHero_SteerYoungAirMoveHeadingFromHorizontalInput();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  CPlayerHero_AdvanceAnimationScript();
+  CPlayerHero_SpawnYoungWaterAttachmentEffects();
   return;
 }
-
 

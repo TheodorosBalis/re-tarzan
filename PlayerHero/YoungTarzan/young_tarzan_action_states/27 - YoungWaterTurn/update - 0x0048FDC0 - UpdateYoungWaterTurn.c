@@ -18,7 +18,7 @@ void CPlayerHero__UpdateYoungWaterTurn(void)
       g_PlayerActionState = 3;
       g_PreviousPlayerActionState = uVar1;
       /* table enter state 0x03 -> CPlayerHero::EnterYoungTarzanTurnAround */
-  CPlayerHero__EnterYoungTarzanTurnAround();
+      CPlayerHero__EnterYoungTarzanTurnAround();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x80) == 0) {
@@ -28,10 +28,9 @@ void CPlayerHero__UpdateYoungWaterTurn(void)
       g_PlayerMoveHeadingAngle = g_PlayerMoveHeadingAngle + -0x2d;
     }
   }
-  CPlayerHero__UpdateMovementAndCollision(1);
-  CPlayerHero__AdvanceAnimationScript();
-  CPlayerHero__SpawnYoungWaterAttachmentEffects();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  CPlayerHero_AdvanceAnimationScript();
+  CPlayerHero_SpawnYoungWaterAttachmentEffects();
   return;
 }
-
 

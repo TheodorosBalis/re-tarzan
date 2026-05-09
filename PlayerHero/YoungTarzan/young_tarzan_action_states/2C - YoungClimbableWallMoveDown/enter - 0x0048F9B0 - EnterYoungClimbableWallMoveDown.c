@@ -8,11 +8,10 @@ void CPlayerHero__EnterYoungClimbableWallMoveDown(void)
 
 {
   if (DAT_0051ce40 == '\0') {
-    CPlayerHero__PlayAnimation(0x80);
+    CPlayerHero_PlayAnimation(0x80);
     return;
   }
-  CPlayerHero__PlayAnimation(0x81);
+  CPlayerHero_PlayAnimation(0x81);
   return;
 }
-
 

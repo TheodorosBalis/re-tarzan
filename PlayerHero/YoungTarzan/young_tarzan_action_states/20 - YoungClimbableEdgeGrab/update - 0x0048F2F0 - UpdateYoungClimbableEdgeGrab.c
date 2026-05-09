@@ -10,17 +10,16 @@ void CPlayerHero__UpdateYoungClimbableEdgeGrab(void)
   undefined2 uVar1;
   char cVar2;
   
-  CPlayerHero__UpdateMovementAndCollision(1);
-  cVar2 = CPlayerHero__TrySnapToNearbyGround();
+  CPlayerHero_UpdateMovementAndCollision(1);
+  cVar2 = CPlayerHero_TrySnapToNearbyGround();
   uVar1 = g_PlayerActionState;
   if (cVar2 == '\0') {
     g_PlayerActionState = 7;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x07 -> CPlayerHero::EnterYoungTarzanFalling */
-  CPlayerHero__EnterYoungTarzanFalling();
+    CPlayerHero__EnterYoungTarzanFalling();
   }
-  CPlayerHero__AdvanceAnimationScript();
+  CPlayerHero_AdvanceAnimationScript();
   return;
 }
-
 

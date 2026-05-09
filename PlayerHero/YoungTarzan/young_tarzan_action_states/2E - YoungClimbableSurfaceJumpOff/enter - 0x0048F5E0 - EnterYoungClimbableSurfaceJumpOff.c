@@ -8,11 +8,10 @@ void CPlayerHero__EnterYoungClimbableSurfaceJumpOff(void)
 
 {
   if (*(char *)(g_PlayerSceneEntry + 0x75) == '\0') {
-    CPlayerHero__PlayAnimation(0x72);
+    CPlayerHero_PlayAnimation(0x72);
     return;
   }
-  CPlayerHero__PlayAnimation(0x6e);
+  CPlayerHero_PlayAnimation(0x6e);
   return;
 }
-
 

@@ -7,8 +7,7 @@ Address: 0x00491740
 void CPlayerHero__EnterYoungTreeSurfingMinorHit(void)
 
 {
-  CPlayerHero__PlayAnimation(0x2a);
+  CPlayerHero_PlayAnimation(0x2a);
   return;
 }
-
 

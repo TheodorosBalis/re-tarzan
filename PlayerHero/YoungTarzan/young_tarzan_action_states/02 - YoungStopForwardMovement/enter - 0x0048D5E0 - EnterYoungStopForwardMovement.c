@@ -20,10 +20,10 @@ void CPlayerHero__EnterYoungTarzanStopForwardMovement(void)
     g_PlayerActionState = 0;
     g_PreviousPlayerActionState = uVar1;
     /* table enter state 0x00 -> CPlayerHero::EnterYoungTarzanIdle */
-  CPlayerHero__EnterYoungTarzanIdle();
+    CPlayerHero__EnterYoungTarzanIdle();
   }
   else {
-    CPlayerHero__PlayAnimation(9);
+    CPlayerHero_PlayAnimation(9);
   }
   *(undefined4 *)(g_PlayerMotionState + 0x1c) = 0;
   *(undefined4 *)(g_PlayerMotionState + 0x10) = 0;
@@ -33,5 +33,4 @@ void CPlayerHero__EnterYoungTarzanStopForwardMovement(void)
   *(undefined1 *)(g_PlayerMotionState + 0xd) = 0;
   return;
 }
-
 

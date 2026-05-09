@@ -9,7 +9,7 @@ void CPlayerHero__UpdateYoungFatalDamageSequence(void)
 {
   int iVar1;
   
-  CPlayerHero__AdvanceAnimationScript();
+  CPlayerHero_AdvanceAnimationScript();
   if (*(char *)(g_PlayerMotionState + 0xd) == '\0') {
     *(int *)(g_PlayerMotionState + 0x20) =
          *(int *)(g_PlayerMotionState + 0x20) + *(int *)(g_PlayerMotionState + 0x24);
@@ -57,5 +57,4 @@ LAB_00436144:
        *(int *)(g_PlayerSceneEntryData + 0x10) + *(int *)(g_PlayerMotionState + 0x30);
   return;
 }
-
 

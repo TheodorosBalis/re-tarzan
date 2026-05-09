@@ -23,7 +23,7 @@ LAB_0048ed49:
         g_PlayerActionState = 3;
         g_PreviousPlayerActionState = sVar1;
         /* table enter state 0x03 -> CPlayerHero::EnterYoungTarzanTurnAround */
-  CPlayerHero__EnterYoungTarzanTurnAround();
+        CPlayerHero__EnterYoungTarzanTurnAround();
         DAT_005314ac = 0;
         return;
       }
@@ -37,14 +37,14 @@ LAB_0048ed49:
     if ((((DAT_0051cdf0 == 0x87) || (DAT_0051cdf0 == 0x8c)) &&
         ((_g_PlayerSequenceFlags & 0xf000) == 0)) && (g_PlayerCurrentCollisionMode != 0)) {
       if (g_PlayerCurrentCollisionMode < 3) {
-        cVar2 = CPlayerHero__IsFacingCurrentCollisionSurface();
+        cVar2 = CPlayerHero_IsFacingCurrentCollisionSurface();
         sVar1 = g_PlayerActionState;
         if (((cVar2 == '\0') && ((g_PlayerInputHeldMask & g_CameraFollowFlags) != 0)) &&
            (g_PlayerCollisionFacingFlags == '\0')) {
           g_PlayerActionState = 1;
           g_PreviousPlayerActionState = sVar1;
           /* table enter state 0x01 -> CPlayerHero::EnterYoungTarzanMoveForward */
-  CPlayerHero__EnterYoungTarzanMoveForward();
+          CPlayerHero__EnterYoungTarzanMoveForward();
           return;
         }
       }
@@ -52,7 +52,7 @@ LAB_0048ed49:
         g_PlayerActionState = 0xe;
         g_PreviousPlayerActionState = sVar1;
         /* table enter state 0x0E -> CPlayerHero::EnterYoungTouchSurfaceOnSurfing */
-  CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
+        CPlayerHero__EnterYoungTouchSurfaceOnSurfing();
         return;
       }
     }
@@ -62,19 +62,19 @@ LAB_0048ed49:
         g_PlayerActionState = 5;
         g_PreviousPlayerActionState = sVar1;
         /* table enter state 0x05 -> CPlayerHero::EnterYoungTarzanMovingJump */
-  CPlayerHero__EnterYoungTarzanMovingJump();
+        CPlayerHero__EnterYoungTarzanMovingJump();
         return;
       }
       g_PlayerActionState = 6;
       g_PreviousPlayerActionState = sVar1;
       /* table enter state 0x06 -> CPlayerHero::EnterYoungTarzanStandingJump */
-  CPlayerHero__EnterYoungTarzanStandingJump();
+      CPlayerHero__EnterYoungTarzanStandingJump();
       return;
     }
-    CPlayerHero__UpdateMovementAndCollision(1);
-    iVar3 = CPlayerHero__AdvanceAnimationScript();
+    CPlayerHero_UpdateMovementAndCollision(1);
+    iVar3 = CPlayerHero_AdvanceAnimationScript();
     if (iVar3 == 4) {
-      FUN_0043fc90(0,0,0,0xf,0x11);
+      InstantiateRuntimeEntryByTypeAtPosition(0,0,0,0xf,0x11);
     }
     else {
       if (iVar3 == 8) {
@@ -91,11 +91,11 @@ LAB_0048ed49:
             return;
           }
           if ((g_PlayerInputHeldMask & 0x800000) != 0) {
-            CPlayerHero__PlayAnimation(0x88);
+            CPlayerHero_PlayAnimation(0x88);
             g_PlayerActionState = 0x33;
             return;
           }
-          CPlayerHero__PlayAnimation(0x87);
+          CPlayerHero_PlayAnimation(0x87);
           return;
         }
         if (g_PlayerActionState == 0x33) {
@@ -104,11 +104,11 @@ LAB_0048ed49:
             return;
           }
           if ((g_PlayerInputHeldMask & 0x400000) != 0) {
-            CPlayerHero__PlayAnimation(0x84);
+            CPlayerHero_PlayAnimation(0x84);
             g_PlayerActionState = 0x32;
             return;
           }
-          CPlayerHero__PlayAnimation(0x8c);
+          CPlayerHero_PlayAnimation(0x8c);
           return;
         }
       }
@@ -118,7 +118,7 @@ LAB_0048ed49:
   if ((ram0x0051cdca & 0x1000) == 0) {
     if (g_PlayerDamageInvulnerabilityTicks != 0) {
       g_PlayerCollisionFacingFlags = '\x01';
-      CPlayerHero__ApplyDamageContactPushback();
+      CPlayerHero_ApplyDamageContactPushback();
       goto LAB_0048ed49;
     }
     if (g_PlayerCurrentCollisionMode != 4) {
@@ -126,7 +126,7 @@ LAB_0048ed49:
         g_PlayerActionState = 0xc;
         g_PreviousPlayerActionState = sVar1;
         /* table enter state 0x0C -> CPlayerHero::EnterYoungPlayerDamage */
-  CPlayerHero__EnterYoungPlayerDamage();
+        CPlayerHero__EnterYoungPlayerDamage();
         return;
       }
       goto LAB_0048ecff;
@@ -137,7 +137,7 @@ LAB_0048ed49:
       g_PlayerActionState = 0x30;
       g_PreviousPlayerActionState = sVar1;
       /* table enter state 0x30 -> CPlayerHero::EnterYoungApplyDamageOnJumping */
-  CPlayerHero__EnterYoungApplyDamageOnJumping();
+      CPlayerHero__EnterYoungApplyDamageOnJumping();
       if (g_PlayerDamageInvulnerabilityTicks != 0) {
         return;
       }
@@ -149,7 +149,7 @@ LAB_0048ecff:
     g_PlayerActionState = 0x13;
     g_PreviousPlayerActionState = sVar1;
     /* table enter state 0x13 -> CPlayerHero::EnterYoungApplyDamageOnTreeSurfing */
-  CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
+    CPlayerHero__EnterYoungApplyDamageOnTreeSurfing();
     return;
   }
   g_PlayerActionState = 0x29;
@@ -158,5 +158,4 @@ LAB_0048ecff:
   CPlayerHero__EnterYoungApplyDamageInWater();
   return;
 }
-
 

@@ -15,7 +15,7 @@ void CPlayerHero__EnterYoungClimbableWallMoveUp(void)
   else {
     uVar1 = 0x83;
   }
-  CPlayerHero__PlayAnimation(uVar1);
+  CPlayerHero_PlayAnimation(uVar1);
   *(int *)(g_PlayerSceneEntryData + 0xc) = *(int *)(g_PlayerSceneEntryData + 0xc) + 0x70;
   if (g_PlayerInteractionCollisionHeightRange <=
       *(int *)(g_PlayerSceneEntryData + 0xc) - g_PlayerInteractionCollisionBaseY) {
@@ -24,10 +24,9 @@ void CPlayerHero__EnterYoungClimbableWallMoveUp(void)
     g_PreviousPlayerActionState = g_PlayerActionState;
     g_PlayerActionState = 0x2b;
     /* table enter state 0x2B -> CPlayerHero::EnterYoungClimbableWallIdle */
-  CPlayerHero__EnterYoungClimbableWallIdle();
+    CPlayerHero__EnterYoungClimbableWallIdle();
     return;
   }
   return;
 }
-
 
