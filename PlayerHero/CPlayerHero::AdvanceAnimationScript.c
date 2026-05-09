@@ -1,3 +1,4 @@
+// 0x00433560
 uint CPlayerHero_AdvanceAnimationScript(void)
 
 {
