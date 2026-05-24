@@ -36,7 +36,7 @@ void CPlayerHero__UpdateTerk(void)
   }
   CPlayerHero__RefreshClimbableEdgeCollisionContext();
   g_InputPreviousMask = g_InputPreviousMask & ~(uint)g_CameraFollowFlags;
-  (*(code *)(*g_TerkActionStateHandlerTable)[(uint)g_PlayerActionState * 2])();
+  (*(code *)(&g_TerkActionStateHandlerTable)[(uint)g_PlayerActionState * 2])();
   CPlayerHero__UpdateSceneEntryFacingAngles();
   if (g_PlayerActionState == 0) {
     DAT_0051cdcc = DAT_0051cdcc + 1;
