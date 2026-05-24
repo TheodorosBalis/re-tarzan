@@ -2,7 +2,7 @@
 
 Decompiled HUD functions grouped by subsystem. These files were regenerated from Ghidra into `ghidra_export/hud_complete_decomp` and copied here for easier reading.
 
-## Core
+
 
 - `00444560_CWorld__UpdateHudPhase.c`
 - `004446F0_CWorld_RenderRuntimeEntriesAndHud.c`
