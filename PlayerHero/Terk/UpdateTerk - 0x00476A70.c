@@ -1,8 +1,6 @@
 ﻿/*
 Terk action-state dispatcher: CPlayerHero::UpdateTerk
 Address: 0x00476A70
-Table: 0x0050C148 g_TerkActionStateHandlerTable
-Update column: 0x0050C14C
 */
 
 
@@ -38,7 +36,7 @@ void CPlayerHero__UpdateTerk(void)
   }
   CPlayerHero__RefreshClimbableEdgeCollisionContext();
   g_InputPreviousMask = g_InputPreviousMask & ~(uint)g_CameraFollowFlags;
-  (*(code *)(&PTR_CPlayerHero__UpdateTerkIdle_0050c14c)[(uint)g_PlayerActionState * 2])();
+  (*(code *)(*g_TerkActionStateHandlerTable)[(uint)g_PlayerActionState * 2])();
   CPlayerHero__UpdateSceneEntryFacingAngles();
   if (g_PlayerActionState == 0) {
     DAT_0051cdcc = DAT_0051cdcc + 1;
