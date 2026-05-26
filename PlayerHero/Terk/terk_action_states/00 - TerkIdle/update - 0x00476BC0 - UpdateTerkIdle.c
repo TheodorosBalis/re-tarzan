@@ -78,7 +78,7 @@ void CPlayerHero__UpdateTerkIdle(void)
       g_PreviousPlayerActionState = uVar1;
                     /* WARNING: Could not recover jumptable at 0x00476d3a. Too many branches */
                     /* WARNING: Treating indirect jump as call */
-      (*_DAT_0050c1e0)();
+      CPlayerHero::EnterTerkPound();
       return;
     }
     if ((g_PlayerInputHeldMask & 0x80000) != 0) {
