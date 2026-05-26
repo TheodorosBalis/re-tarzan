@@ -42,7 +42,7 @@ void WinMessageLoop(void)
       PauseAudioLinePlayback();
       StopActiveStreamedWork();
     }
-    RunLegacyHandlersOrUpdateFrame();
+    ApplyRequestedGraphicsModeWithFallback();
     iVar3 = ConsumeGraphicsModeFailure(&local_120);
     if (iVar3 != 0) {
       cStack_100 = DAT_00724234;
@@ -128,26 +128,26 @@ void WinMessageLoop(void)
 switchD_004aed82_default:
       switch(iVar3) {
       case 1:
-        if (DAT_00724ed0 == 0) {
+        if (g_ActiveStreamedWorkHandle == 0) {
           pcVar10 = s_GLIDE_3D_NOT_AVAILABLE_00518f04;
 LAB_004aee78:
           ShowTwoLineOptionsMessage(pcVar10,&cStack_100);
         }
         break;
       case 2:
-        if (DAT_00724ed0 == 0) {
+        if (g_ActiveStreamedWorkHandle == 0) {
           pcVar10 = s_DIRECT3D_NOT_AVAILABLE_00518eec;
           goto LAB_004aee78;
         }
         break;
       case 3:
-        if (DAT_00724ed0 == 0) {
+        if (g_ActiveStreamedWorkHandle == 0) {
           pcVar10 = s_DDRAW_LOW_RES_NOT_AVAILABLE_00518ed0;
           goto LAB_004aee78;
         }
         break;
       case 4:
-        if (DAT_00724ed0 == 0) {
+        if (g_ActiveStreamedWorkHandle == 0) {
           pcVar10 = s_DDRAW_HIGH_RES_NOT_AVAILABLE_00518eb0;
           goto LAB_004aee78;
         }
@@ -160,10 +160,10 @@ LAB_004aee78:
     if (((g_MainWindowActivationState != 0) && (g_IsMainWindowMinimized == 0)) &&
        (g_MainWindowMessagePulseCount == 0)) {
       iVar3 = VerifyGraphicsMode();
-      if ((iVar3 != 0) && (DVar4 = timeGetTime(), DAT_00c46c64 < DVar4)) {
+      if ((iVar3 != 0) && (DVar4 = timeGetTime(), g_NextCursorKeepaliveTickMs < DVar4)) {
         GetCursorPos(&tStack_128);
         SetCursorPos(tStack_128.x,tStack_128.y);
-        DAT_00c46c64 = DVar4 + 5000;
+        g_NextCursorKeepaliveTickMs = DVar4 + 5000;
       }
       return;
     }
