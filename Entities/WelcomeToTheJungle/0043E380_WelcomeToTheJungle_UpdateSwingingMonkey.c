@@ -66,7 +66,7 @@ LAB_0043e429:
     }
     break;
   case 4:
-    iVar8 = FUN_00430d40(param_1,g_PlayerRuntimeEntry);
+    iVar8 = CEntities::IsTargetRuntimeEntryInFront(param_1,g_PlayerRuntimeEntry);
     if (((iVar8 != 0) && (299 < *(int *)(g_PlayerSceneEntry + 0x18) - *(int *)(iVar9 + 0x18))) &&
        (iVar9 = CEntities__ComputeSceneEntryDataDistance3D(iVar9 + 0xc,g_PlayerSceneEntryData),
        iVar9 <= *(int *)(param_1 + 0x50))) {
