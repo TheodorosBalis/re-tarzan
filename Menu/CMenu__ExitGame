@@ -1,5 +1,0 @@
-// 0x453030
-void CMenu:__ExitGame(void)
-{
-    ExitIfFailed2();
-}
