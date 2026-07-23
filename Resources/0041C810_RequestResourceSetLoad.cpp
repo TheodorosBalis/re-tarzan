@@ -11,8 +11,7 @@ void RequestResourceSetLoad(int arg1)
   undefined4 value;
   
   if ((*(int *)(arg1 + 8) == -1) && (*(int *)(arg1 + 0xc) == 0)) {
-    value = EnqueueAssetPayloadLoadRequest
-                      (*(undefined4 *)(arg1 + 4),BuildResourceSetTextureRuntimeAfterLoad,arg1)
+    value = EnqueueAssetPayloadLoadRequest(*(undefined4 *)(arg1 + 4),BuildResourceSetTextureRuntimeAfterLoad,arg1)
     ;
     *(undefined4 *)(arg1 + 8) = value;
   }
