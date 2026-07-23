@@ -5,8 +5,7 @@
 // Label origin: project
 // Original labels and source files are tracked in manifest.csv.
 
-void RenderMenuUiBlockEntry
-               (int menu,undefined4 menuItem,int selection,undefined4 inputFlags,undefined4 arg5)
+void RenderMenuUiBlockEntry(int menu,undefined4 menuItem,int selection,undefined4 inputFlags,undefined4 arg5)
 
 {
   undefined4 localState;
