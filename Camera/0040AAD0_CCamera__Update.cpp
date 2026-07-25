@@ -74,11 +74,8 @@ void CCamera::Update(char arg1)
       shortValue = *(short *)(value + 0xa2);
       dataCursor = g_CameraOverrideTargetPtr;
     }
-    CCamera::BuildPoseFromIndexedJungleSurfacePath
-              (value + 0x10c,dataCursor,&g_CameraUpdateEyePoint,&g_CameraUpdateTargetPose,(int)shortValue,
-               (-(uint)(((byte)g_CameraFollowFlags & 0x80) != 0) & 2) - 1,arg1);
-    CCamera::BlendOrSnapToTargetPose
-              (&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(arg1 != '\0') & 0x4be510);
+    CCamera::BuildPoseFromIndexedJungleSurfacePath(value + 0x10c,dataCursor,&g_CameraUpdateEyePoint,&g_CameraUpdateTargetPose,(int)shortValue,(-(uint)(((byte)g_CameraFollowFlags & 0x80) != 0) & 2) - 1,arg1);
+    CCamera::BlendOrSnapToTargetPose(&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(arg1 != '\0') & 0x4be510);
     return;
   }
   return;
