@@ -50,17 +50,14 @@ void CCamera::FollowPlayerOnAnchorPath(int cameraState,int target)
                  &g_CameraUpdateEyePoint);
       InterpolateJungleSurfacePointAtCoord(value5,value4,&g_CameraUpdateTargetPose);
       _g_CameraUpdateTargetDistance =
-           CCamera::ComputeLookAtAnglesAndDistance
-                     (&g_CameraUpdateEyePoint,&g_CameraUpdateTargetPose,
-                      &g_CameraUpdateTargetPitchYaw);
+           CCamera::ComputeLookAtAnglesAndDistance(&g_CameraUpdateEyePoint,&g_CameraUpdateTargetPose,&g_CameraUpdateTargetPitchYaw);
       _g_CameraAnchorPathProgress = 0;
       _g_CameraAnchorPathSegment = 0;
       _g_CameraUpdateDistanceScale = 0x140;
       g_CameraUpdateTargetPose = *(undefined4 *)(cameraState + 0x14);
       g_CameraTrailingOffsetX = *(undefined4 *)(cameraState + 0x18);
       _g_CameraTrailingOffsetZ = *(undefined4 *)(cameraState + 0x1c);
-      CCamera::BlendOrSnapToTargetPose
-                (&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(target != 0) & 0x4be600);
+      CCamera::BlendOrSnapToTargetPose(&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(target != 0) & 0x4be600);
     }
   }
   _g_AnchorPathCameraScratch_Field0008 = 0;
