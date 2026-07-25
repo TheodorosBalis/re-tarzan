@@ -29,8 +29,7 @@ void CCamera::FollowPlayerWithTrailingOffset(int cameraState,int target)
   EaseOrSnapInt3Vector(&g_CameraUpdateEyePoint,&localState3,3,target);
   CCamera::BuildTargetPoseFromLookAt(&g_CameraUpdateEyePoint,intCursor,&g_CameraUpdateTargetPose);
   _g_CameraUpdateDistanceScale = 0x118;
-  CCamera::BlendOrSnapToTargetPose
-            (&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(target != 0) & 0x4be5d0);
+  CCamera::BlendOrSnapToTargetPose(&g_CameraFocusX,&g_CameraUpdateTargetPose,~-(uint)(target != 0) & 0x4be5d0);
   return;
 }
 
