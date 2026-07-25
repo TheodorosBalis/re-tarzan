@@ -62,9 +62,7 @@ void ProcessPlayerDamageAndDeath(void)
         value = 1;
         value2 = ram0x0051cdca;
       }
-      PlayForceFeedbackEffect_Stub
-                (0,CONCAT22((short)(value2 >> 0x10),
-                            *(undefined2 *)(&g_PlayerForceFeedbackEffectTable + value * 4)),
+      PlayForceFeedbackEffect_Stub(0,CONCAT22((short)(value2 >> 0x10), *(undefined2 *)(&g_PlayerForceFeedbackEffectTable + value * 4)),
                  CONCAT31((int3)(g_GameplayRuntimeFlags >> 8),
                           (&g_PlayerForceFeedbackEffectParamByte)[value * 4]));
     }
