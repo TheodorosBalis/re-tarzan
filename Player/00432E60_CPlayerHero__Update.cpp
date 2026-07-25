@@ -97,8 +97,7 @@ void CPlayerHero::Update(void)
     }
     g_LastProcessedSurfaceTriggerPacket = shortValue;
     if ((_g_PlayerSequenceFlags & 0x2000) == 0) {
-      value = GetSceneAttachmentWorldPositionByMask
-                        (g_PlayerEntitySceneObject,0x80,&g_CameraOverrideTargetX);
+      value = GetSceneAttachmentWorldPositionByMask(g_PlayerEntitySceneObject,0x80,&g_CameraOverrideTargetX);
       g_PlayerFacingCurrentCollisionSurface = 0;
       g_CameraOverrideTargetPtr = -(uint)(value != 0) & 0x51ce08;
     }
