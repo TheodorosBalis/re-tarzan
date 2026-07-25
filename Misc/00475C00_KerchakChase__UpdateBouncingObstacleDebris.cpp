@@ -14,8 +14,7 @@ void KerchakChase::UpdateBouncingObstacleDebris(int entry)
   
   value = CEntities::FindEntityAttachmentByFlags(entry,0x10000000);
   if (value != 0) {
-    value = CEntities::AdvanceBounceMotionAndReturnImpact
-                      (entity->sceneObjects,value + 0x10);
+    value = CEntities::AdvanceBounceMotionAndReturnImpact(entity->sceneObjects,value + 0x10);
     if (value != 0) {
       CEntities::ReleaseEntityAndMarkDescriptorConsumed(entry);
     }
